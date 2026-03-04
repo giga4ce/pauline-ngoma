@@ -428,9 +428,7 @@ transform: translateY(0);}}
                 ></Script>
               </div>
             </div>
-            <Footer>
-              <Navigation></Navigation>
-            </Footer>
+            <Footer></Footer>
             <Navigation></Navigation>
             <Footer></Footer>
           </div>

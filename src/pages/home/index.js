@@ -18,24 +18,7 @@ const Home = (props) => {
           href="https://paulinengomamabala-avocat.teleporthq.site/"
         />
       </Helmet>
-      <Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Navigation></Navigation>
-        <Footer></Footer>
-        <Navigation></Navigation>
-        <Footer></Footer>
-        <Navigation></Navigation>
-        <Footer></Footer>
-        <Navigation></Navigation>
-        <Footer></Footer>
-      </Navigation>
+      <Navigation></Navigation>
       <div className="home-container2">
         <div className="home-container3">
           <Script
