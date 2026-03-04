@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
-import Navigation from '../../components/navigation'
-import Footer from '../../components/footer'
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 import './cabinet.css'
 
 const Cabinet = (props) => {

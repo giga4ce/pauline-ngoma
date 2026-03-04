@@ -6,13 +6,13 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import './styles/globals.css'
-import Expertise from './pages/expertise'
-import Honoraires from './pages/honoraires'
-import Home from './pages/home'
-import Contact from './pages/contact'
-import Cabinet from './pages/cabinet'
-import NotFound from './pages/not-found'
+import '@/styles/globals.css'
+import Expertise from '@/pages/expertise'
+import Honoraires from '@/pages/honoraires'
+import Home from '@/pages/home'
+import Contact from '@/pages/contact'
+import Cabinet from '@/pages/cabinet'
+import NotFound from '@/pages/not-found'
 
 const App = () => {
   return (
