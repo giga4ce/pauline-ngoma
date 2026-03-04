@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
 } from 'react-router-dom'
 
 import './styles/globals.css'
@@ -24,8 +23,7 @@ const App = () => {
         <Route component={Home} exact path="/" />
         <Route component={Contact} exact path="/contact" />
         <Route component={Cabinet} exact path="/cabinet" />
-        <Route component={NotFound} path="**" />
-        <Redirect to="**" />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   )
