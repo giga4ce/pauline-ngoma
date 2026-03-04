@@ -274,9 +274,7 @@ transform: translateY(0);}}
                 ></Script>
               </div>
             </div>
-            <Footer></Footer>
             <Navigation></Navigation>
-            <Footer></Footer>
           </div>
         </div>
         <div className="hero-content-container">
@@ -550,6 +548,7 @@ transform: translateY(0);}}
           </div>
         </section>
       </main>
+      <Footer></Footer>
       <div className="cabinet-container21">
         <div className="cabinet-container22">
           <Script

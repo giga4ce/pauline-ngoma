@@ -17,7 +17,7 @@ const Contact = (props) => {
           href="https://paulinengomamabala-avocat.teleporthq.site/contact"
         />
       </Helmet>
-      <MainLayout showFooter={false}>
+      <MainLayout>
         <section className="honoraires-hero">
           <div className="honoraires-hero-overlay"></div>
           <div className="hero-content">
