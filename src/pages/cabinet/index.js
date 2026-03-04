@@ -32,7 +32,6 @@ const Cabinet = (props) => {
           />
           <div className="hero-overlay">
             <Navigation></Navigation>
-            <main className="cabinet-thq-expertise-page-elm1 expertise-page"></main>
             <div className="cabinet-container11">
               <div className="cabinet-container12">
                 <Script
@@ -86,7 +85,7 @@ transform: translateY(0);}}
                     src="https://images.pexels.com/photos/7841844/pexels-photo-7841844.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                     className="hero-bg-image"
                   />
-                  <div className="cabinet-thq-hero-overlay-elm2 expertise-hero-overlay1"></div>
+                  <div className="expertise-hero-overlay1"></div>
                 </div>
                 <div className="expertise-hero-content-container1">
                   <div className="content-limit">
