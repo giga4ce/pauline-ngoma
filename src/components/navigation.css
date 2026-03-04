@@ -1,0 +1,23 @@
+.navigation-container1 {
+  display: contents;
+}
+ 
+.navigation-thq-navigation-logo-accent-elm1 {
+  color: var(--color-accent);
+}
+ 
+.navigation-thq-navigation-link-elm2 {
+  text-decoration: none;
+}
+ 
+.navigation-thq-navigation-logo-accent-elm2 {
+  color: var(--color-accent);
+}
+ 
+.navigation-container2 {
+  display: none;
+}
+ 
+.navigation-container3 {
+  display: contents;
+}

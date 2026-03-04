@@ -1,0 +1,13 @@
+.honoraires-container1 {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+ 
+.honoraires-container2 {
+  display: none;
+}
+ 
+.honoraires-container3 {
+  display: contents;
+}

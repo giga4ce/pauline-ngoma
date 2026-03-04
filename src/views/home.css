@@ -1,0 +1,43 @@
+.home-container1 {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+ 
+.home-container2 {
+  display: none;
+}
+ 
+.home-container3 {
+  display: contents;
+}
+ 
+.home-container4 {
+  display: none;
+}
+ 
+.home-container5 {
+  display: contents;
+}
+ 
+.home-container6 {
+  display: none;
+}
+ 
+.home-container7 {
+  display: contents;
+}
+ 
+.home-container8 {
+  display: none;
+}
+ 
+.home-container9 {
+  display: contents;
+}
+ 
+@media(max-width: 767px) {
+  .home-thq-presentation-image-elm {
+    width: 680px;
+  }
+}

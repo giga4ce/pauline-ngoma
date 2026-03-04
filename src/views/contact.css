@@ -1,0 +1,13 @@
+.contact-container1 {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+ 
+.contact-container2 {
+  display: none;
+}
+ 
+.contact-container3 {
+  display: contents;
+}
