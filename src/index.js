@@ -7,13 +7,13 @@ import {
   Redirect,
 } from 'react-router-dom'
 
-import './style.css'
-import Expertise from './views/expertise'
-import Honoraires from './views/honoraires'
-import Home from './views/home'
-import Contact from './views/contact'
-import Cabinet from './views/cabinet'
-import NotFound from './views/not-found'
+import './styles/globals.css'
+import Expertise from './pages/expertise'
+import Honoraires from './pages/honoraires'
+import Home from './pages/home'
+import Contact from './pages/contact'
+import Cabinet from './pages/cabinet'
+import NotFound from './pages/not-found'
 
 const App = () => {
   return (
