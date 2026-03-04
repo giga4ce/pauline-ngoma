@@ -3,7 +3,7 @@ import React from 'react'
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
-import Navigation from '@/components/navigation'
+import MainLayout from '@/layouts/MainLayout'
 import './honoraires.css'
 
 const Honoraires = (props) => {
@@ -17,8 +17,8 @@ const Honoraires = (props) => {
           href="https://paulinengomamabala-avocat.teleporthq.site/honoraires"
         />
       </Helmet>
-      <Navigation></Navigation>
-      <section className="honoraires-hero">
+      <MainLayout showFooter={false}>
+        <section className="honoraires-hero">
         <div className="honoraires-hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">Honoraires</h1>
@@ -206,10 +206,10 @@ const Honoraires = (props) => {
           </div>
         </div>
       </section>
-      <div className="honoraires-container2">
-        <div className="honoraires-container3">
-          <Script
-            html={`<script>
+        <div className="honoraires-container2">
+          <div className="honoraires-container3">
+            <Script
+              html={`<script>
 (function(){
   // Logic for subtle scroll reveal effects
   const revealOnScroll = () => {
@@ -249,9 +249,10 @@ const Honoraires = (props) => {
   revealOnScroll()
 })()
 </script>`}
-          ></Script>
+            ></Script>
+          </div>
         </div>
-      </div>
+      </MainLayout>
     </div>
   )
 }

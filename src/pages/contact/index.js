@@ -3,7 +3,7 @@ import React from 'react'
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
-import Navigation from '@/components/navigation'
+import MainLayout from '@/layouts/MainLayout'
 import './contact.css'
 
 const Contact = (props) => {
@@ -17,162 +17,162 @@ const Contact = (props) => {
           href="https://paulinengomamabala-avocat.teleporthq.site/contact"
         />
       </Helmet>
-      <Navigation></Navigation>
-      <section className="contact-page-wrapper">
-        <div className="contact-contact-container">
-          <header className="contact-header">
-            <span className="section-subtitle">Prendre rendez-vous</span>
-            <h1 className="hero-title">Contact</h1>
-            <div className="header-divider"></div>
-          </header>
-          <div className="contact-contact-grid">
-            <div className="contact-info-panel">
-              <div className="info-card">
-                <div className="info-icon-wrapper">
-                  <svg
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+      <MainLayout showFooter={false}>
+        <section className="contact-page-wrapper">
+          <div className="contact-contact-container">
+            <header className="contact-header">
+              <span className="section-subtitle">Prendre rendez-vous</span>
+              <h1 className="hero-title">Contact</h1>
+              <div className="header-divider"></div>
+            </header>
+            <div className="contact-contact-grid">
+              <div className="contact-info-panel">
+                <div className="info-card">
+                  <div className="info-icon-wrapper">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
                     >
-                      <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-                      <circle r="3" cx="12" cy="10"></circle>
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                        <circle r="3" cx="12" cy="10"></circle>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="info-content">
+                    <h3 className="info-label">Adresse du Cabinet</h3>
+                    <p className="section-content">
+                      <span>
+                        {' '}
+                        12 Avenue des Champs-Élysées
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                      <br></br>
+                      <span>
+                        {' '}
+                        75008 Paris, France
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="info-content">
-                  <h3 className="info-label">Adresse du Cabinet</h3>
-                  <p className="section-content">
-                    <span>
-                      {' '}
-                      12 Avenue des Champs-Élysées
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                    <br></br>
-                    <span>
-                      {' '}
-                      75008 Paris, France
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div className="info-card">
-                <div className="info-icon-wrapper">
-                  <svg
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="info-content">
-                  <h3 className="info-label">Téléphone</h3>
-                  <p className="section-content">+33 (0)1 40 50 60 70</p>
-                </div>
-              </div>
-              <div className="info-card">
-                <div className="info-icon-wrapper">
-                  <svg
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                <div className="info-card">
+                  <div className="info-icon-wrapper">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
                     >
-                      <path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                      <rect x="2" y="4" rx="2" width="20" height="16"></rect>
-                    </g>
-                  </svg>
+                      <path
+                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="info-content">
+                    <h3 className="info-label">Téléphone</h3>
+                    <p className="section-content">+33 (0)1 40 50 60 70</p>
+                  </div>
                 </div>
-                <div className="info-content">
-                  <h3 className="info-label">Email</h3>
-                  <p className="section-content">cabinet@avocat-prestige.fr</p>
-                </div>
-              </div>
-              <div className="info-card">
-                <div className="info-icon-wrapper">
-                  <svg
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                <div className="info-card">
+                  <div className="info-icon-wrapper">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
                     >
-                      <circle r="10" cx="12" cy="12"></circle>
-                      <path d="M12 6v6l4 2"></path>
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                        <rect x="2" y="4" rx="2" width="20" height="16"></rect>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="info-content">
+                    <h3 className="info-label">Email</h3>
+                    <p className="section-content">cabinet@avocat-prestige.fr</p>
+                  </div>
                 </div>
-                <div className="info-content">
-                  <h3 className="info-label">Heures d&apos;ouverture</h3>
-                  <p className="section-content">
-                    <span>
-                      {' '}
-                      Lundi — Vendredi : 09:00 - 19:00
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                    <br></br>
-                    <span>
-                      {' '}
-                      Samedi : Sur rendez-vous uniquement
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: ' ',
-                        }}
-                      />
-                    </span>
-                  </p>
+                <div className="info-card">
+                  <div className="info-icon-wrapper">
+                    <svg
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle r="10" cx="12" cy="12"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="info-content">
+                    <h3 className="info-label">Heures d&apos;ouverture</h3>
+                    <p className="section-content">
+                      <span>
+                        {' '}
+                        Lundi — Vendredi : 09:00 - 19:00
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                      <br></br>
+                      <span>
+                        {' '}
+                        Samedi : Sur rendez-vous uniquement
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: ' ',
+                          }}
+                        />
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="contact-form-panel">
-              <form
-                action="/contact"
-                method="POST"
-                data-form-id="767f1e8a-b0f2-49a7-a920-afd05f5b9ef7"
-                className="contact-contact-form"
-              >
+              <div className="contact-form-panel">
+                <form
+                  action="/contact"
+                  method="POST"
+                  data-form-id="767f1e8a-b0f2-49a7-a920-afd05f5b9ef7"
+                  className="contact-contact-form"
+                >
                 <div className="contact-form-row">
                   <div className="contact-form-group">
                     <label htmlFor="nom" className="contact-form-label">
@@ -265,15 +265,15 @@ const Contact = (props) => {
                     heures ouvrées.
                   </p>
                 </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <div className="contact-container2">
-        <div className="contact-container3">
-          <Script
-            html={`<script>
+        </section>
+        <div className="contact-container2">
+          <div className="contact-container3">
+            <Script
+              html={`<script>
 (function(){
   const contactForm = document.querySelector(".contact-form")
 
@@ -303,9 +303,10 @@ const Contact = (props) => {
   }
 })()
 </script>`}
-          ></Script>
+            ></Script>
+          </div>
         </div>
-      </div>
+      </MainLayout>
     </div>
   )
 }
