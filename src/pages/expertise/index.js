@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet'
 
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
+import ValuesSection from '@/sections/shared/ValuesSection'
+import CtaSection from '@/sections/shared/CtaSection'
 import './expertise.css'
 
 const Expertise = (props) => {
@@ -175,81 +177,13 @@ const Expertise = (props) => {
                   </div>
                 </div>
               </section>
-              <section className="expertise-values">
-                <div className="content-limit">
-                  <div className="values-flex-container">
-                    <div className="values-content">
-                      <h2 className="section-title">Notre Engagement</h2>
-                      <p className="section-content">
-                        Chaque dossier est traité avec une exigence
-                        d&apos;excellence et une discrétion absolue. Notre
-                        cabinet s&apos;engage à vos côtés pour transformer la
-                        complexité juridique en solutions claires et pérennes.
-                      </p>
-                      <ul className="values-list">
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text10">
-                              Excellence :
-                            </span>
-                            <span>
-                              {' '}
-                              Une rigueur juridique sans compromis.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text12">
-                              Dévouement :
-                            </span>
-                            <span>
-                              {' '}
-                              Votre cause au centre de notre stratégie.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text14">
-                              Professionnalisme :
-                            </span>
-                            <span>
-                              {' '}
-                              Une éthique irréprochable.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="values-image-wrapper">
-                      <img
-                        alt="Symbole de la justice"
-                        src="https://images.pexels.com/photos/6593883/pexels-photo-6593883.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                        className="values-img"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <ValuesSection
+                emphasisClasses={[
+                  'expertise-text10',
+                  'expertise-text12',
+                  'expertise-text14',
+                ]}
+              />
             </main>
             <div className="expertise-container11">
               <div className="expertise-container12">
@@ -441,81 +375,13 @@ transform: translateY(0);}}
                   </div>
                 </div>
               </section>
-              <section className="expertise-values">
-                <div className="content-limit">
-                  <div className="values-flex-container">
-                    <div className="values-content">
-                      <h2 className="section-title">Notre Engagement</h2>
-                      <p className="section-content">
-                        Chaque dossier est traité avec une exigence
-                        d&apos;excellence et une discrétion absolue. Notre
-                        cabinet s&apos;engage à vos côtés pour transformer la
-                        complexité juridique en solutions claires et pérennes.
-                      </p>
-                      <ul className="values-list">
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text16">
-                              Excellence :
-                            </span>
-                            <span>
-                              {' '}
-                              Une rigueur juridique sans compromis.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text18">
-                              Dévouement :
-                            </span>
-                            <span>
-                              {' '}
-                              Votre cause au centre de notre stratégie.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                        <li className="value-item">
-                          <span className="value-dot"></span>
-                          <span className="section-content">
-                            <span className="expertise-text20">
-                              Professionnalisme :
-                            </span>
-                            <span>
-                              {' '}
-                              Une éthique irréprochable.
-                              <span
-                                dangerouslySetInnerHTML={{
-                                  __html: ' ',
-                                }}
-                              />
-                            </span>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="values-image-wrapper">
-                      <img
-                        alt="Symbole de la justice"
-                        src="https://images.pexels.com/photos/6593883/pexels-photo-6593883.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                        className="values-img"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <ValuesSection
+                emphasisClasses={[
+                  'expertise-text16',
+                  'expertise-text18',
+                  'expertise-text20',
+                ]}
+              />
             </main>
             <div className="expertise-container15">
               <div className="expertise-container16">
@@ -736,25 +602,7 @@ transform: translateY(0);}}
           </div>
         </div>
       </section>
-      <section className="expertise-cta-section">
-        <div className="cta-inner-container">
-          <div className="cta-text-block">
-            <h2 className="section-title">
-              Besoin d&apos;un conseil juridique ?
-            </h2>
-            <p className="section-content">
-              Le cabinet vous reçoit sur rendez-vous pour analyser votre
-              situation et définir la meilleure stratégie de défense.
-            </p>
-          </div>
-          <div className="cta-actions">
-            <button className="btn btn-primary btn-lg">
-              Prendre rendez-vous
-            </button>
-            <button className="btn btn-outline btn-lg">Nous contacter</button>
-          </div>
-        </div>
-      </section>
+      <CtaSection />
       <div className="expertise-container19">
         <div className="expertise-container20">
           <Script
