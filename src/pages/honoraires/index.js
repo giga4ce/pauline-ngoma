@@ -17,7 +17,7 @@ const Honoraires = (props) => {
           href="https://paulinengomamabala-avocat.teleporthq.site/honoraires"
         />
       </Helmet>
-      <MainLayout showFooter={false}>
+      <MainLayout>
         <section className="honoraires-hero">
         <div className="honoraires-hero-overlay"></div>
         <div className="hero-content">
