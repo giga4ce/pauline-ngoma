@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
@@ -24,38 +25,6 @@ const Footer = (props) => {
               commitment.
             </p>
           </div>
-          <nav aria-label="Footer Navigation" className="footer-navigation">
-            <ul className="footer-nav-list">
-              <li className="footer-nav-item">
-                <a href="#homepage">
-                  <div className="footer-nav-link">
-                    <span>Home</span>
-                  </div>
-                </a>
-              </li>
-              <li className="footer-nav-item">
-                <a href="#about">
-                  <div className="footer-nav-link">
-                    <span>About</span>
-                  </div>
-                </a>
-              </li>
-              <li className="footer-nav-item">
-                <a href="#practice-areas">
-                  <div className="footer-nav-link">
-                    <span>Practice Areas</span>
-                  </div>
-                </a>
-              </li>
-              <li className="footer-nav-item">
-                <a href="#contact">
-                  <div className="footer-nav-link">
-                    <span>Contact</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
           <div className="footer-socials">
             <a href="#">
               <div aria-label="LinkedIn" className="footer-social-link">
@@ -129,19 +98,19 @@ const Footer = (props) => {
           <div className="footer-divider"></div>
           <div className="footer-bottom">
             <div className="footer-legal">
-              <a href="#">
+              <Link to="/mentions-legales">
                 <div className="footer-legal-link">
-                  <span>Legal Notice</span>
+                  <span>Mentions légales</span>
                 </div>
-              </a>
+              </Link>
               <span aria-hidden="true" className="footer-legal-separator">
                 •
               </span>
-              <a href="#">
+              <Link to="/politique-de-confidentialite">
                 <div className="footer-legal-link">
-                  <span>Privacy Policy</span>
+                  <span>Politique de confidentialité</span>
                 </div>
-              </a>
+              </Link>
             </div>
             <p className="footer-copyright">
               © 2024 Maître Pauline NGOMA-MABALA. All rights reserved.
@@ -154,7 +123,7 @@ const Footer = (props) => {
           <Script
             html={`<script defer data-name="footer-scroll-reveal">
 (function(){
-  const footerElements = document.querySelectorAll(".footer-branding, .footer-navigation, .footer-socials, .footer-bottom")
+  const footerElements = document.querySelectorAll(".footer-branding, .footer-socials, .footer-bottom")
 
   const revealOptions = {
     threshold: 0.1,
