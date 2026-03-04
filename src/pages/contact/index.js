@@ -18,6 +18,15 @@ const Contact = (props) => {
         />
       </Helmet>
       <MainLayout showFooter={false}>
+        <section className="honoraires-hero">
+          <div className="honoraires-hero-overlay"></div>
+          <div className="hero-content">
+            <h1 className="hero-title">Contact</h1>
+            <p className="hero-subtitle">
+              Parlons de votre situation et construisons la meilleure strategie.
+            </p>
+          </div>
+        </section>
         <section className="contact-page-wrapper">
           <div className="contact-contact-container">
             <header className="contact-header">
