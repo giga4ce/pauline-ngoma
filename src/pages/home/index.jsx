@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import './home.css'
+import './home.scss'
 
 const Home = (props) => {
   return (
