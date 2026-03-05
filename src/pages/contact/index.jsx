@@ -4,7 +4,7 @@ import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
 import MainLayout from '@/layouts/MainLayout'
-import './contact.css'
+import './contact.scss'
 
 const Contact = (props) => {
   return (

@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import MainLayout from '@/layouts/MainLayout'
-import '@/pages/legal/legal.css'
+import '@/pages/legal/legal.scss'
 
 const PolitiqueConfidentialite = () => {
   return (
