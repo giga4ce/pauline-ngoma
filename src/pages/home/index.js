@@ -59,11 +59,6 @@ const Home = (props) => {
                   <span>Prendre rendez-vous</span>
                 </div>
               </a>
-              <a href="#contact">
-                <div className="btn hero-btn-secondary btn-outline btn-lg">
-                  <span>Me contacter</span>
-                </div>
-              </a>
             </div>
           </div>
         </div>

@@ -6,11 +6,15 @@ import Script from 'dangerous-html/react'
 import './navigation.css'
 
 const Navigation = (props) => {
+  const handleHomeBrandClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="navigation-container1">
       <nav className="navigation-wrapper">
         <div className="navigation-container">
-          <Link to="/">
+          <Link to="/" onClick={handleHomeBrandClick}>
             <div
               aria-label="Maître Pauline NGOMA-MABALA - Home"
               className="navigation-brand"
@@ -111,7 +115,7 @@ const Navigation = (props) => {
       </nav>
       <div id="navigation-mobile-overlay" className="navigation-mobile-overlay">
         <div className="navigation-overlay-header">
-          <Link to="/">
+          <Link to="/" onClick={handleHomeBrandClick}>
             <div
               aria-label="Maître Pauline NGOMA-MABALA - Home"
               className="navigation-brand"
