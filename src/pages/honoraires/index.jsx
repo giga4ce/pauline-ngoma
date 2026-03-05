@@ -4,7 +4,7 @@ import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
 import MainLayout from '@/layouts/MainLayout'
-import './honoraires.css'
+import './honoraires.scss'
 
 const Honoraires = (props) => {
   return (

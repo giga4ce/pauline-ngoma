@@ -10,7 +10,7 @@ import ValuesSection from '@/sections/shared/ValuesSection'
 import CtaSection from '@/sections/shared/CtaSection'
 import ExpertiseGridSection from '@/sections/shared/ExpertiseGridSection'
 import ExpertiseRevealScript from '@/sections/shared/ExpertiseRevealScript'
-import './cabinet.css'
+import './cabinet.scss'
 
 const Cabinet = (props) => {
   return (
