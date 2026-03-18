@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
+import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import './navigation.css'
 
 const Navigation = (props) => {
@@ -204,7 +205,9 @@ const Navigation = (props) => {
             </Link>
             <div className="navigation-mobile-info">
               <p className="section-content">75008 Paris, France</p>
-              <p className="section-content">cabinet@eloise-prestige.fr</p>
+              <p className="section-content">
+                <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
+              </p>
             </div>
           </div>
         </div>

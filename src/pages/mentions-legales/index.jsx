@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
+import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import MainLayout from '@/layouts/MainLayout'
 import '@/pages/legal/legal.scss'
 
@@ -34,7 +35,9 @@ const MentionsLegales = () => {
                 <ul className="legal-list section-content">
                   <li>Adresse: 12 Avenue des Champs-Élysées, 75008 Paris</li>
                   <li>Téléphone: +33 (0)1 40 50 60 70</li>
-                  <li>Email: cabinet@avocat-prestige.fr</li>
+                  <li>
+                    Email: <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
+                  </li>
                 </ul>
               </section>
 
@@ -80,7 +83,8 @@ const MentionsLegales = () => {
                 <h2 className="section-title">Contact</h2>
                 <p className="section-content">
                   Pour toute question relative au site ou à son contenu, vous
-                  pouvez écrire à: cabinet@avocat-prestige.fr.
+                  pouvez écrire à:{' '}
+                  <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>.
                 </p>
               </section>
             </div>

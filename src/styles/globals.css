@@ -1653,6 +1653,36 @@
   flex: 1;
 }
  
+.form-honeypot {
+  display: none;
+}
+ 
+.form-feedback {
+  min-height: 1.5rem;
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+}
+ 
+.form-feedback-neutral {
+  color: var(--color-on-surface-secondary);
+}
+ 
+.form-feedback-success {
+  color: #1f7a4d;
+}
+ 
+.form-feedback-error {
+  color: #b42318;
+}
+ 
+.btn[disabled],
+.submit-button[disabled] {
+  opacity: 0.8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+ 
 .form-input:focus {
   outline: none;
   border-color: var(--color-accent);

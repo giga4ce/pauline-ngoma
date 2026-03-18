@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
+import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import MainLayout from '@/layouts/MainLayout'
 import '@/pages/legal/legal.scss'
 
@@ -89,8 +90,9 @@ const PolitiqueConfidentialite = () => {
                   portabilité de vos données.
                 </p>
                 <p className="section-content">
-                  Pour exercer vos droits, contactez: cabinet@avocat-prestige.fr.
-                  En cas de litige, vous pouvez saisir la CNIL (www.cnil.fr).
+                  Pour exercer vos droits, contactez:{' '}
+                  <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>. En cas de
+                  litige, vous pouvez saisir la CNIL (www.cnil.fr).
                 </p>
               </section>
 
