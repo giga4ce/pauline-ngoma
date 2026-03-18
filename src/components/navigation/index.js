@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom'
 import Script from 'dangerous-html/react'
 
 import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
-import './navigation.css'
 
-const Navigation = (props) => {
+const Navigation = () => {
   const handleHomeBrandClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
-    <div className="navigation-container1">
+    <>
       <nav className="navigation-wrapper">
         <div className="navigation-container">
           <Link to="/" onClick={handleHomeBrandClick}>
@@ -21,27 +20,7 @@ const Navigation = (props) => {
               className="navigation-brand"
             >
               <span className="navigation-logo-text section-title">
-                <span>
-                  {' '}
-                  M
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span className="navigation-thq-navigation-logo-accent-elm1">
-                  É
-                </span>
-                <span>
-                  {' '}
-                  P
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
+                M<span className="navigation-logo-accent">É</span>P
               </span>
               <div className="navigation-brand-details">
                 <span className="navigation-brand-name">
@@ -56,38 +35,28 @@ const Navigation = (props) => {
           <div className="navigation-desktop-menu">
             <ul className="navigation-links-list">
               <li>
-                <Link to="/expertise">
-                  <div className="navigation-link">
-                    <span>Expertise</span>
-                  </div>
+                <Link className="navigation-link" to="/expertise">
+                  Expertise
                 </Link>
               </li>
               <li>
-                <Link to="/cabinet">
-                  <div className="navigation-thq-navigation-link-elm2 navigation-link">
-                    <span>Cabinet</span>
-                  </div>
+                <Link className="navigation-link" to="/cabinet">
+                  Cabinet
                 </Link>
               </li>
               <li>
-                <Link to="/honoraires">
-                  <div className="navigation-link">
-                    <span>Honoraires</span>
-                  </div>
+                <Link className="navigation-link" to="/honoraires">
+                  Honoraires
                 </Link>
               </li>
               <li>
-                <Link to="/contact">
-                  <div className="navigation-link">
-                    <span>Contact</span>
-                  </div>
+                <Link className="navigation-link" to="/contact">
+                  Contact
                 </Link>
               </li>
             </ul>
-            <Link to="/contact">
-              <div className="btn-sm btn navigation-cta btn-primary">
-                <span>Prendre RDV</span>
-              </div>
+            <Link className="btn-sm btn navigation-cta btn-primary" to="/contact">
+              Prendre RDV
             </Link>
           </div>
           <button
@@ -122,27 +91,7 @@ const Navigation = (props) => {
               className="navigation-brand"
             >
               <span className="navigation-logo-text section-title">
-                <span>
-                  {' '}
-                  M
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span className="navigation-thq-navigation-logo-accent-elm2">
-                  É
-                </span>
-                <span>
-                  {' '}
-                  P
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
+                M<span className="navigation-logo-accent">É</span>P
               </span>
             </div>
           </Link>
@@ -171,37 +120,29 @@ const Navigation = (props) => {
         <div className="navigation-overlay-content">
           <ul className="navigation-mobile-links">
             <li>
-              <Link to="/expertise">
-                <div className="navigation-mobile-link hero-title">
-                  <span>Expertise</span>
-                </div>
+              <Link className="navigation-mobile-link hero-title" to="/expertise">
+                Expertise
               </Link>
             </li>
             <li>
-              <div className="navigation-mobile-link hero-title">
-                <span>Cabinet</span>
-              </div>
-            </li>
-            <li>
-              <Link to="/honoraires">
-                <div className="navigation-mobile-link hero-title">
-                  <span>Honoraires</span>
-                </div>
+              <Link className="navigation-mobile-link hero-title" to="/cabinet">
+                Cabinet
               </Link>
             </li>
             <li>
-              <Link to="/contact">
-                <div className="navigation-mobile-link hero-title">
-                  <span>Contact</span>
-                </div>
+              <Link className="navigation-mobile-link hero-title" to="/honoraires">
+                Honoraires
+              </Link>
+            </li>
+            <li>
+              <Link className="navigation-mobile-link hero-title" to="/contact">
+                Contact
               </Link>
             </li>
           </ul>
           <div className="navigation-mobile-footer">
-            <Link to="/contact">
-              <div className="btn btn-primary btn-lg">
-                <span>Prendre rendez-vous</span>
-              </div>
+            <Link className="btn btn-primary btn-lg" to="/contact">
+              Prendre rendez-vous
             </Link>
             <div className="navigation-mobile-info">
               <p className="section-content">75008 Paris, France</p>
@@ -212,10 +153,8 @@ const Navigation = (props) => {
           </div>
         </div>
       </div>
-      <div className="navigation-container2">
-        <div className="navigation-container3">
-          <Script
-            html={`<script>
+      <Script
+        html={`<script>
         ;(function () {
           const mobileToggle = document.getElementById("navigation-mobile-toggle")
           const mobileClose = document.getElementById("navigation-mobile-close")
@@ -287,10 +226,8 @@ const Navigation = (props) => {
           setActiveLink()
         })()
       </script>`}
-          ></Script>
-        </div>
-      </div>
-    </div>
+      ></Script>
+    </>
   )
 }
 

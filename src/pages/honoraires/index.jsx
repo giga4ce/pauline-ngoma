@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
 import MainLayout from '@/layouts/MainLayout'
-import './honoraires.scss'
 
-const Honoraires = (props) => {
+const Honoraires = () => {
   return (
-    <div className="honoraires-container1">
+    <Fragment>
       <Helmet>
         <title>Honoraires - Full Pricey Quetzal</title>
         <meta property="og:title" content="Honoraires - Full Pricey Quetzal" />
@@ -19,35 +18,35 @@ const Honoraires = (props) => {
       </Helmet>
       <MainLayout>
         <section className="honoraires-hero">
-        <div className="honoraires-hero-overlay"></div>
-        <div className="hero-content">
-          <h1 className="hero-title">Honoraires</h1>
-          <p className="hero-subtitle">
-            Transparence et clarté pour une défense sereine
-          </p>
-        </div>
-      </section>
-      <section className="honoraires-intro">
-        <div className="intro-container">
-          <div className="intro-text">
-            <h2 className="section-title">Une relation de confiance</h2>
-            <p className="section-content">
-              La question financière est abordée dès le premier rendez-vous, en
-              toute transparence. Chaque dossier fait l&apos;objet d&apos;une
-              convention d&apos;honoraires écrite, précisant les modalités de
-              facturation et les frais prévisibles. Mon engagement est de vous
-              offrir une visibilité totale sur le coût de votre accompagnement
-              juridique.
+          <div className="honoraires-hero-overlay"></div>
+          <div className="hero-content">
+            <h1 className="hero-title">Honoraires</h1>
+            <p className="hero-subtitle">
+              Transparence et clarté pour une défense sereine
             </p>
           </div>
-          <div className="intro-decorative">
-            <div className="gold-line"></div>
+        </section>
+        <section className="honoraires-intro">
+          <div className="intro-container">
+            <div className="intro-text">
+              <h2 className="section-title">Une relation de confiance</h2>
+              <p className="section-content">
+                La question financière est abordée dès le premier rendez-vous,
+                en toute transparence. Chaque dossier fait l&apos;objet
+                d&apos;une convention d&apos;honoraires écrite, précisant les
+                modalités de facturation et les frais prévisibles. Mon
+                engagement est de vous offrir une visibilité totale sur le coût
+                de votre accompagnement juridique.
+              </p>
+            </div>
+            <div className="intro-decorative">
+              <div className="gold-line"></div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="billing-methods">
-        <div className="methods-grid">
-          <div className="method-card">
+        </section>
+        <section className="billing-methods">
+          <div className="methods-grid">
+            <div className="method-card">
             <div className="method-icon">
               <svg
                 width="24"
@@ -206,10 +205,8 @@ const Honoraires = (props) => {
           </div>
         </div>
       </section>
-        <div className="honoraires-container2">
-          <div className="honoraires-container3">
-            <Script
-              html={`<script>
+        <Script
+          html={`<script>
 (function(){
   // Logic for subtle scroll reveal effects
   const revealOnScroll = () => {
@@ -249,11 +246,9 @@ const Honoraires = (props) => {
   revealOnScroll()
 })()
 </script>`}
-            ></Script>
-          </div>
-        </div>
+        ></Script>
       </MainLayout>
-    </div>
+    </Fragment>
   )
 }
 

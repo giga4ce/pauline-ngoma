@@ -1,0 +1,213 @@
+.honoraires-hero {
+  height: 60vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  background-image: url("https://images.pexels.com/photos/7841844/pexels-photo-7841844.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  background-position: center;
+}
+ 
+.honoraires-hero-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  background: var(--color-scrim);
+}
+ 
+.hero-content {
+  color: var(--color-surface);
+  padding: 0 var(--spacing-xl);
+  z-index: 3;
+  position: relative;
+  max-width: var(--content-max-width);
+}
+ 
+.honoraires-intro {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-surface);
+}
+ 
+.intro-container {
+  gap: var(--spacing-3xl);
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--content-max-width);
+  align-items: center;
+}
+ 
+.intro-text {
+  flex: 7;
+}
+ 
+.intro-decorative {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+ 
+.gold-line {
+  width: 2px;
+  height: 150px;
+  position: relative;
+  background: var(--color-accent);
+}
+ 
+.billing-methods {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-surface-elevated);
+}
+ 
+.methods-grid {
+  gap: var(--spacing-xl);
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--content-max-width);
+}
+ 
+.method-card {
+  gap: var(--spacing-md);
+  flex: 1;
+  border: 1px solid var(--color-outline);
+  display: flex;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: var(--color-surface);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  flex-direction: column;
+}
+ 
+
+ 
+.method-icon {
+  color: var(--color-accent);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  background: color-mix(in oklab, var(--color-accent) 15%, transparent);
+  align-items: center;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-sm);
+  justify-content: center;
+}
+ 
+.method-title {
+  color: var(--color-primary);
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-family-heading);
+}
+ 
+.method-list {
+  gap: var(--spacing-sm);
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin-top: var(--spacing-md);
+  flex-direction: column;
+}
+ 
+.method-item {
+  gap: var(--spacing-xs);
+  color: var(--color-on-surface-secondary);
+  display: flex;
+  font-size: var(--font-size-sm);
+  align-items: center;
+  font-family: var(--font-family-body);
+}
+ 
+.additional-info {
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-surface);
+}
+ 
+.info-wrapper {
+  gap: var(--spacing-3xl);
+  margin: 0 auto;
+  display: grid;
+  max-width: var(--content-max-width);
+  grid-template-columns: 1fr 1fr;
+}
+ 
+.info-block {
+  padding: var(--spacing-xl);
+  border-left: 1px solid var(--color-outline);
+}
+ 
+.cta-section {
+  color: var(--color-on-primary);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  background: var(--color-primary);
+  text-align: center;
+}
+ 
+.cta-container {
+  gap: var(--spacing-lg);
+  margin: 0 auto;
+  display: flex;
+  max-width: 600px;
+  flex-direction: column;
+}
+ 
+.cta-buttons {
+  gap: var(--spacing-md);
+  display: flex;
+  margin-top: var(--spacing-md);
+  justify-content: center;
+}
+ 
+.intro-text  .section-title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+ 
+.gold-line::after {
+  left: -4px;
+  width: 10px;
+  bottom: -10px;
+  height: 10px;
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background: var(--color-accent);
+}
+ 
+.method-card.elevated {
+  transform: translateY(-10px);
+  border-top: 4px solid var(--color-accent);
+  box-shadow: var(--shadow-level-2);
+}
+ 
+.method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-level-3);
+}
+ 
+.method-item::before {
+  width: 6px;
+  height: 6px;
+  content: "";
+  background: var(--color-accent);
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+ 
+.info-block  .section-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+ 
+.cta-container  .section-title {
+  color: var(--color-surface);
+}
+ 
+.cta-container  .section-content {
+  color: color-mix(in oklab, var(--color-on-primary) 80%, transparent);
+}
+ 

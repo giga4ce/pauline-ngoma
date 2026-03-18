@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
@@ -7,9 +7,8 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import { useContactForm } from '@/hooks/useContactForm'
-import './home.scss'
 
-const Home = (props) => {
+const Home = () => {
   const {
     feedback,
     handleSubmit,
@@ -24,7 +23,7 @@ const Home = (props) => {
   })
 
   return (
-    <div className="home-container1">
+    <Fragment>
       <Helmet>
         <title>Full Pricey Quetzal</title>
         <meta property="og:title" content="Full Pricey Quetzal" />
@@ -34,17 +33,6 @@ const Home = (props) => {
         />
       </Helmet>
       <Navigation></Navigation>
-      <div className="home-container2">
-        <div className="home-container3">
-          <Script
-            html={`<style>
-* {
-  box-sizing: border-box;
-}
-</style>`}
-          ></Script>
-        </div>
-      </div>
       <section className="hero-principal">
         <div className="hero-principal-background">
           <img
@@ -86,7 +74,7 @@ const Home = (props) => {
                 <img
                   alt="Portrait de Maître Pauline NGOMA-MABALA"
                   src="https://images.pexels.com/photos/7841465/pexels-photo-7841465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="presentation-image home-thq-presentation-image-elm"
+                  className="presentation-image presentation-image-home"
                 />
                 <div className="presentation-image-accent"></div>
               </div>
@@ -468,22 +456,43 @@ const Home = (props) => {
                   </div>
                 </div>
               </section>
-              <div className="home-container4">
-                <div className="home-container5">
-                  <Script
-                    html={`<script>
+              <Script
+                html={`<script>
 (function(){
   ;(function () {
     const track = document.getElementById("testimonials-track")
     const dots = document.querySelectorAll(".testimonial-dot")
+    const wrapper = document.querySelector(".testimonials-slider-wrapper")
+    const slides = track ? Array.from(track.children) : []
+
+    if (!track || !wrapper || !dots.length || !slides.length) {
+      return
+    }
+
     let currentIndex = 0
     const slideCount = dots.length
     let autoScrollInterval
 
+    function getSlideWidth() {
+      return wrapper.getBoundingClientRect().width
+    }
+
+    function syncSliderLayout() {
+      const slideWidth = getSlideWidth()
+
+      slides.forEach((slide) => {
+        slide.style.width = \`\${slideWidth}px\`
+        slide.style.flex = \`0 0 \${slideWidth}px\`
+      })
+
+      track.style.width = \`\${slideWidth * slideCount}px\`
+      track.style.transform = \`translateX(-\${currentIndex * slideWidth}px)\`
+    }
+
     function updateSlider(index) {
       currentIndex = index
-      const offset = -index * (100 / slideCount)
-      track.style.transform = \`translateX(\${offset}%)\`
+      const offset = index * getSlideWidth()
+      track.style.transform = \`translateX(-\${offset}px)\`
 
       dots.forEach((dot, i) => {
         if (i === index) {
@@ -518,18 +527,18 @@ const Home = (props) => {
     })
 
     // Pause on hover
-    const wrapper = document.querySelector(".testimonials-slider-wrapper")
     wrapper.addEventListener("mouseenter", stopAutoScroll)
     wrapper.addEventListener("mouseleave", startAutoScroll)
+    window.addEventListener("resize", syncSliderLayout)
 
     // Initialize
+    syncSliderLayout()
+    updateSlider(0)
     startAutoScroll()
   })()
 })()
 </script>`}
-                  ></Script>
-                </div>
-              </div>
+              ></Script>
             </div>
           </div>
         </div>
@@ -770,22 +779,8 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-      <div className="home-container6">
-        <div className="home-container7">
-          <Script
-            html={`<style>
-        @keyframes fadeIn {from {opacity: 0;
-transform: translateY(20px);}
-to {opacity: 1;
-transform: translateY(0);}}
-        </style> `}
-          ></Script>
-        </div>
-      </div>
-      <div className="home-container8">
-        <div className="home-container9">
-          <Script
-            html={`<script defer data-name="lawyer-interactions">
+      <Script
+        html={`<script defer data-name="lawyer-interactions">
 (function(){
   // Subtle scroll reveal effect
   const observerOptions = {
@@ -822,11 +817,9 @@ transform: translateY(0);}}
 
 })()
 </script>`}
-          ></Script>
-        </div>
-      </div>
+      ></Script>
       <Footer></Footer>
-    </div>
+    </Fragment>
   )
 }
 

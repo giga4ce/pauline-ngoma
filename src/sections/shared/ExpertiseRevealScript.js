@@ -2,12 +2,10 @@ import React from 'react'
 
 import Script from 'dangerous-html/react'
 
-const ExpertiseRevealScript = ({ containerClassName, contentClassName }) => {
+const ExpertiseRevealScript = () => {
   return (
-    <div className={containerClassName}>
-      <div className={contentClassName}>
-        <Script
-          html={`<script>
+    <Script
+      html={`<script>
 (function(){
   // Logic for scroll-triggered reveal animations
   const observerOptions = {
@@ -50,9 +48,7 @@ const ExpertiseRevealScript = ({ containerClassName, contentClassName }) => {
   }
 })()
 </script>`}
-        ></Script>
-      </div>
-    </div>
+    ></Script>
   )
 }
 

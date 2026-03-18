@@ -1,0 +1,335 @@
+.expertise-page {
+  color: var(--color-on-surface);
+  overflow-x: hidden;
+  background-color: var(--color-surface);
+}
+
+.expertise-page-hero {
+  min-height: 70vh;
+}
+
+.expertise-hero {
+  height: 60vh;
+  display: flex;
+  position: relative;
+  min-height: 500px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-media-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expertise-hero-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  background: var(--color-scrim);
+}
+
+.expertise-hero-intro {
+  color: var(--color-surface);
+  z-index: 3;
+  position: relative;
+  width: 100%;
+}
+
+.content-limit {
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  max-width: var(--content-max-width);
+}
+
+.hero-pretitle {
+  color: var(--color-accent);
+  display: block;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-body);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.expertise-hero-title {
+  opacity: 0;
+  animation: fadeUpHero 0.8s ease-out forwards;
+  transform: translateY(30px);
+  margin-bottom: var(--spacing-md);
+}
+
+.expertise-hero-description {
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeUpHero 0.8s ease-out 0.2s forwards;
+  max-width: 600px;
+  transform: translateY(20px);
+}
+
+.expertise-grid-section {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-surface);
+}
+
+.expertise-container {
+  gap: var(--spacing-2xl) var(--spacing-xl);
+  margin: 0 auto;
+  display: grid;
+  padding: 0 var(--spacing-xl);
+  max-width: var(--content-max-width);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.expertise-item-card {
+  gap: var(--spacing-lg);
+  display: flex;
+  padding: var(--spacing-xl);
+  transition: transform 0.4s ease;
+  flex-direction: column;
+}
+
+.card-visual {
+  gap: var(--spacing-md);
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-wrapper {
+  color: var(--color-accent);
+  width: 48px;
+  border: 1px solid var(--color-outline);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-full);
+  justify-content: center;
+}
+
+.gold-accent-line {
+  height: 1px;
+  flex-grow: 1;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+}
+
+.expertise-item-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-content .section-title {
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.card-content .section-content {
+  color: var(--color-on-surface-secondary);
+  max-width: 90%;
+}
+
+.card-content .btn-link {
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  align-self: flex-start;
+  font-weight: 600;
+  padding-left: 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.expertise-values {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-surface);
+}
+
+.values-flex-container {
+  gap: var(--spacing-3xl);
+  display: flex;
+  align-items: center;
+}
+
+.values-content {
+  flex: 1;
+}
+
+.values-image-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-level-2);
+  border-radius: var(--border-radius-lg);
+}
+
+.values-list {
+  gap: var(--spacing-md);
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin-top: var(--spacing-xl);
+  flex-direction: column;
+}
+
+.values-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.value-item {
+  gap: var(--spacing-md);
+  display: flex;
+  align-items: center;
+}
+
+.value-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-accent);
+}
+
+.values-emphasis {
+  font-weight: 700;
+}
+
+.values-content .section-title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.values-image-wrapper:hover .values-img {
+  transform: scale(1.05);
+}
+
+.expertise-cta-section {
+  padding: var(--spacing-3xl) 0;
+  border-top: var(--divider-value);
+  background-color: var(--color-surface-elevated);
+}
+
+.cta-inner-container {
+  gap: var(--spacing-2xl);
+  margin: 0 auto;
+  display: flex;
+  padding: 0 var(--spacing-xl);
+  max-width: var(--content-max-width);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-text-block {
+  flex: 1;
+}
+
+.cta-actions {
+  gap: var(--spacing-md);
+  display: flex;
+}
+
+.cta-text-block .section-title {
+  margin-bottom: var(--spacing-sm);
+}
+
+.expertise-expertise-grid-section {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-surface) 0%,
+    var(--color-surface-elevated) 100%
+  );
+}
+
+.grid-header {
+  margin: 0 auto var(--spacing-3xl);
+  max-width: 800px;
+  text-align: center;
+}
+
+.expertise-cards-container {
+  gap: var(--spacing-xl);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-header .section-title {
+  margin-bottom: var(--spacing-md);
+}
+
+.expertise-card {
+  flex: 1 1 calc(25% - var(--spacing-xl));
+  border: 1px solid var(--color-outline);
+  display: flex;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  flex-direction: column;
+  background-color: var(--color-surface);
+}
+
+.card-icon-wrapper {
+  color: var(--color-accent);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-lg);
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--color-accent) 5%, transparent);
+}
+
+.card-title {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-accent-line {
+  left: 0;
+  width: 0%;
+  bottom: 0;
+  height: 4px;
+  position: absolute;
+  transition: width 0.4s ease;
+  background-color: var(--color-accent);
+}
+
+.expertise-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-level-3);
+  border-color: var(--color-accent);
+}
+
+.expertise-card:hover .card-accent-line {
+  width: 100%;
+}
+
+@keyframes fadeUpHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
-import './footer.css'
-
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div className="footer-container1">
+    <>
       <footer className="footer-wrapper">
         <div className="footer-container">
           <div className="footer-branding">
@@ -26,90 +24,83 @@ const Footer = (props) => {
             </p>
           </div>
           <div className="footer-socials">
-            <a href="#">
-              <div aria-label="LinkedIn" className="footer-social-link">
-                <svg
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 0 24 24"
+            <a aria-label="LinkedIn" className="footer-social-link" href="#">
+              <svg
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
-                    <circle r="2" cx="4" cy="4"></circle>
-                  </g>
-                </svg>
-              </div>
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
+                  <circle r="2" cx="4" cy="4"></circle>
+                </g>
+              </svg>
             </a>
-            <a href="#">
-              <div aria-label="Instagram" className="footer-social-link">
-                <svg
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 0 24 24"
+            <a aria-label="Instagram" className="footer-social-link" href="#">
+              <svg
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      rx="5"
-                      ry="5"
-                      width="20"
-                      height="20"
-                    ></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"></path>
-                  </g>
-                </svg>
-              </div>
+                  <rect
+                    x="2"
+                    y="2"
+                    rx="5"
+                    ry="5"
+                    width="20"
+                    height="20"
+                  ></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"></path>
+                </g>
+              </svg>
             </a>
-            <a href="#">
-              <div aria-label="Facebook" className="footer-social-link">
-                <svg
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                </svg>
-              </div>
+            <a aria-label="Facebook" className="footer-social-link" href="#">
+              <svg
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
             </a>
           </div>
           <div className="footer-divider"></div>
           <div className="footer-bottom">
             <div className="footer-legal">
-              <Link to="/mentions-legales">
-                <div className="footer-legal-link">
-                  <span>Mentions légales</span>
-                </div>
+              <Link className="footer-legal-link" to="/mentions-legales">
+                Mentions légales
               </Link>
               <span aria-hidden="true" className="footer-legal-separator">
                 •
               </span>
-              <Link to="/politique-de-confidentialite">
-                <div className="footer-legal-link">
-                  <span>Politique de confidentialité</span>
-                </div>
+              <Link
+                className="footer-legal-link"
+                to="/politique-de-confidentialite"
+              >
+                Politique de confidentialité
               </Link>
             </div>
             <p className="footer-copyright">
@@ -118,10 +109,8 @@ const Footer = (props) => {
           </div>
         </div>
       </footer>
-      <div className="footer-container2">
-        <div className="footer-container3">
-          <Script
-            html={`<script defer data-name="footer-scroll-reveal">
+      <Script
+        html={`<script defer data-name="footer-scroll-reveal">
 (function(){
   const footerElements = document.querySelectorAll(".footer-branding, .footer-socials, .footer-bottom")
 
@@ -148,10 +137,8 @@ const Footer = (props) => {
   })
 })()
 </script>`}
-          ></Script>
-        </div>
-      </div>
-    </div>
+      ></Script>
+    </>
   )
 }
 
