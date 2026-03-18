@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import {
   CONTACT_FORM_ENDPOINT,
@@ -38,6 +38,21 @@ export const useContactForm = ({ subject, successMessage }) => {
   const [status, setStatus] = useState('idle')
   const [feedback, setFeedback] = useState('')
 
+  useEffect(() => {
+    if (status !== 'success' && status !== 'error') {
+      return undefined
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setStatus('idle')
+      setFeedback('')
+    }, 5000)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+    }
+  }, [status])
+
   const resetFeedback = () => {
     if (status === 'idle') {
       return
@@ -61,7 +76,7 @@ export const useContactForm = ({ subject, successMessage }) => {
     }
 
     setStatus('submitting')
-    setFeedback('Envoi en cours...')
+    setFeedback('')
 
     try {
       const response = await fetch(CONTACT_FORM_ENDPOINT, {
