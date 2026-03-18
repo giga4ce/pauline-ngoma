@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import '@/styles/main.scss'
+import './styles/main.scss'
 import AppRouter from '@/app/AppRouter'
 
 export const App = () => {
