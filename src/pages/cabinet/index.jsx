@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import './cabinet.scss'
 
-const Cabinet = (props) => {
+const Cabinet = () => {
   return (
-    <div className="cabinet-container10">
+    <>
       <Helmet>
         <title>Cabinet - Full Pricey Quetzal</title>
         <meta property="og:title" content="Cabinet - Full Pricey Quetzal" />
@@ -282,19 +280,7 @@ const Cabinet = (props) => {
         </section>
       </main>
       <Footer></Footer>
-      <div className="cabinet-container21">
-        <div className="cabinet-container22">
-          <Script
-            html={`<script>
-(function(){
-  // Logic to handle scroll reveals or interactive elements can be added here
-  // For now, keeping it clean as per the luxury institutional mood
-})()
-</script>`}
-          ></Script>
-        </div>
-      </div>
-    </div>
+    </>
   )
 }
 

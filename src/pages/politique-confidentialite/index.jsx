@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet'
 
 import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import MainLayout from '@/layouts/MainLayout'
-import '@/pages/legal/legal.scss'
 
 const PolitiqueConfidentialite = () => {
   return (

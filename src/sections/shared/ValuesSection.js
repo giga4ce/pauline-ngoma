@@ -1,8 +1,6 @@
 import React from 'react'
 
-const ValuesSection = ({ emphasisClasses }) => {
-  const [firstEmphasis, secondEmphasis, thirdEmphasis] = emphasisClasses
-
+const ValuesSection = () => {
   return (
     <section className="expertise-values">
       <div className="content-limit">
@@ -19,46 +17,24 @@ const ValuesSection = ({ emphasisClasses }) => {
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <span className={firstEmphasis}>Excellence :</span>
-                  <span>
-                    {' '}
-                    Une rigueur juridique sans compromis.
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
+                  <strong className="values-emphasis">Excellence :</strong>{' '}
+                  Une rigueur juridique sans compromis.
                 </span>
               </li>
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <span className={secondEmphasis}>Dévouement :</span>
-                  <span>
-                    {' '}
-                    Votre cause au centre de notre stratégie.
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
+                  <strong className="values-emphasis">Dévouement :</strong>{' '}
+                  Votre cause au centre de notre stratégie.
                 </span>
               </li>
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <span className={thirdEmphasis}>Professionnalisme :</span>
-                  <span>
-                    {' '}
-                    Une éthique irréprochable.
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
+                  <strong className="values-emphasis">
+                    Professionnalisme :
+                  </strong>{' '}
+                  Une éthique irréprochable.
                 </span>
               </li>
             </ul>

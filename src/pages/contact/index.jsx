@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import { Helmet } from 'react-helmet'
 
 import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
 import { useContactForm } from '@/hooks/useContactForm'
 import MainLayout from '@/layouts/MainLayout'
-import './contact.scss'
 
-const Contact = (props) => {
+const Contact = () => {
   const {
     feedback,
     handleSubmit,
@@ -22,7 +21,7 @@ const Contact = (props) => {
   })
 
   return (
-    <div className="contact-container1">
+    <Fragment>
       <Helmet>
         <title>Contact - Full Pricey Quetzal</title>
         <meta property="og:title" content="Contact - Full Pricey Quetzal" />
@@ -73,25 +72,9 @@ const Contact = (props) => {
                   <div className="info-content">
                     <h3 className="info-label">Adresse du Cabinet</h3>
                     <p className="section-content">
-                      <span>
-                        {' '}
-                        12 Avenue des Champs-Élysées
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: ' ',
-                          }}
-                        />
-                      </span>
-                      <br></br>
-                      <span>
-                        {' '}
-                        75008 Paris, France
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: ' ',
-                          }}
-                        />
-                      </span>
+                      12 Avenue des Champs-Élysées
+                      <br />
+                      75008 Paris, France
                     </p>
                   </div>
                 </div>
@@ -168,25 +151,9 @@ const Contact = (props) => {
                   <div className="info-content">
                     <h3 className="info-label">Heures d&apos;ouverture</h3>
                     <p className="section-content">
-                      <span>
-                        {' '}
-                        Lundi — Vendredi : 09:00 - 19:00
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: ' ',
-                          }}
-                        />
-                      </span>
-                      <br></br>
-                      <span>
-                        {' '}
-                        Samedi : Sur rendez-vous uniquement
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: ' ',
-                          }}
-                        />
-                      </span>
+                      Lundi — Vendredi : 09:00 - 19:00
+                      <br />
+                      Samedi : Sur rendez-vous uniquement
                     </p>
                   </div>
                 </div>
@@ -328,7 +295,7 @@ const Contact = (props) => {
           </div>
         </section>
       </MainLayout>
-    </div>
+    </Fragment>
   )
 }
 

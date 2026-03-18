@@ -1,0 +1,343 @@
+ 
+.BodyFont {
+  font-size: 1rem;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+ 
+@media(max-width: 991px) {
+  .navigation-desktop-menu {
+    gap: var(--spacing-lg);
+  }
+  .navigation-links-list {
+    gap: var(--spacing-lg);
+  }
+  .presentation-grid {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .presentation-image {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    transform: translateX(20px);
+  }
+  .deroule-steps {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .step-item {
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .step-number {
+    font-size: var(--font-size-2xl);
+    min-width: 50px;
+  }
+  .step-connector {
+    display: none;
+  }
+  .contact-grid {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .expertise-container {
+    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+  }
+  .cta-inner-container {
+    text-align: center;
+    flex-direction: column;
+  }
+  .cabinet-hero-container {
+    text-align: center;
+    flex-direction: column;
+  }
+  .cabinet-hero-content {
+    flex: none;
+    width: 100%;
+  }
+  .cabinet-hero-visual {
+    flex: none;
+    width: 100%;
+  }
+  .cabinet-hero-actions {
+    justify-content: center;
+  }
+  .presentation-wrapper {
+    text-align: center;
+    flex-direction: column;
+  }
+  .presentation-text {
+    flex: none;
+    width: 100%;
+  }
+  .cabinet-presentation-media {
+    flex: none;
+    width: 100%;
+  }
+  .presentation-stats {
+    justify-content: center;
+  }
+  .values-grid {
+    flex-direction: column;
+  }
+  .methods-grid {
+    flex-direction: column;
+  }
+  .info-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .contact-contact-grid {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .contact-info-panel {
+    flex: none;
+    width: 100%;
+  }
+  .contact-form-panel {
+    flex: none;
+    width: 100%;
+  }
+  .testimonials-slider-wrapper {
+    max-width: 100%;
+  }
+  .values-flex-container {
+    text-align: center;
+    flex-direction: column;
+  }
+  .expertise-card {
+    flex: 1 1 calc(50% - var(--spacing-xl));
+  }
+  .value-item {
+    justify-content: center;
+  }
+  .cabinet-hero-overlay {
+    height: 70vh;
+  }
+  .cabinet-grid {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .cabinet-image-container {
+    width: 100%;
+    max-width: 500px;
+  }
+  .cabinet-values-grid1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .approach-flex-container {
+    gap: var(--spacing-2xl);
+    flex-direction: column;
+  }
+  .approach-image-side {
+    width: 100%;
+  }
+  .approach-content-side {
+    width: 100%;
+  }
+}
+ 
+@media(max-width: 767px) {
+  .footer-wrapper {
+    padding-top: var(--spacing-2xl);
+  }
+  .footer-nav-list {
+    gap: var(--spacing-md);
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-logo-text {
+    font-size: var(--font-size-xl);
+  }
+  .navigation-desktop-menu {
+    display: none;
+  }
+  .navigation-toggle {
+    display: block;
+  }
+  .navigation-brand-details {
+    display: none;
+  }
+  .hero-principal-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-principal-actions {
+    justify-content: center;
+  }
+  .domaines-grid {
+    grid-template-columns: 1fr;
+  }
+  .valeurs-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    gap: 0;
+    flex-direction: column;
+  }
+  .expertise-item-card {
+    padding: var(--spacing-lg) 0;
+  }
+  .cta-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .cta-actions  .btn {
+    width: 100%;
+  }
+  .cabinet-hero {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  .cabinet-hero-actions {
+    flex-direction: column;
+  }
+  .presentation-stats {
+    gap: var(--spacing-lg);
+    flex-direction: column;
+  }
+  .intro-container {
+    text-align: center;
+    flex-direction: column;
+  }
+  .intro-decorative {
+    display: none;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .contact-page-wrapper {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  .contact-form-panel {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+  .flex-row {
+    flex-direction: column;
+  }
+  .testimonials-container {
+    padding: 0 var(--spacing-md);
+  }
+  .testimonials-slider-wrapper {
+    max-width: 100%;
+  }
+  .testimonial-card {
+    margin: 0;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  .testimonial-text {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-lg);
+  }
+  .expertise-card {
+    flex: 1 1 100%;
+  }
+  .expertise-hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  .cabinet-hero-overlay {
+    height: auto;
+    padding: var(--spacing-3xl) 0;
+  }
+  .hero-actions-group {
+    width: 100%;
+    max-width: 320px;
+    flex-direction: column;
+  }
+  .cabinet-btn {
+    width: 100%;
+  }
+  .cabinet-values-grid {
+    grid-template-columns: 1fr;
+  }
+  .cabinet-cta-wrapper {
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .cabinet-expertise-hero {
+    height: 70vh;
+  }
+  .engagements-list {
+    grid-template-columns: 1fr;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+  }
+}
+ 
+@media(max-width: 479px) {
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+  .footer-container {
+    padding: 0 var(--spacing-md);
+  }
+  .footer-socials {
+    gap: var(--spacing-md);
+  }
+  .navigation-container {
+    padding: 0 var(--spacing-md);
+  }
+  .navigation-mobile-link {
+    font-size: var(--font-size-3xl);
+  }
+  .home-hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  .hero-principal-actions  .btn {
+    width: 100%;
+  }
+  .expertise-hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  .cabinet-label {
+    font-size: 0.7rem;
+  }
+  .honoraires-hero {
+    height: 50vh;
+  }
+  .method-card {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  .info-card {
+    gap: var(--spacing-sm);
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .testimonials-luxury {
+    padding: var(--spacing-2xl) 0;
+  }
+  .testimonial-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  .testimonial-text {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+  }
+  .expertise-hero {
+    height: 50vh;
+  }
+  .content-limit {
+    padding: 0 var(--spacing-md);
+  }
+  .hero-label {
+    font-size: var(--font-size-xs);
+  }
+  .experience-badge {
+    right: var(--spacing-md);
+    bottom: var(--spacing-md);
+    transform: translateX(0);
+  }
+  .cabinet-values-grid1 {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner-card {
+    padding: var(--spacing-xl);
+  }
+}
