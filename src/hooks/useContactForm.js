@@ -52,7 +52,6 @@ export const useContactForm = ({ subject, successMessage }) => {
       window.clearTimeout(timeoutId)
     }
   }, [status])
-
   const resetFeedback = () => {
     if (status === 'idle') {
       return
