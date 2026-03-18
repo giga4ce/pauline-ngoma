@@ -751,19 +751,20 @@ const Home = (props) => {
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Prendre rendez-vous'}
                 </button>
-                <p
-                  className={`form-feedback ${
-                    isSuccess
-                      ? 'form-feedback-success'
-                      : isError
-                        ? 'form-feedback-error'
-                        : 'form-feedback-neutral'
-                  }`}
-                  role="status"
-                  aria-live="polite"
-                >
-                  {feedback}
-                </p>
+                {feedback ? (
+                  <div
+                    className={`form-flash ${
+                      isSuccess ? 'form-flash-success' : 'form-flash-error'
+                    }`}
+                    role="status"
+                    aria-live="polite"
+                  >
+                    <span className="form-flash-icon" aria-hidden="true">
+                      {isSuccess ? '✓' : '!'}
+                    </span>
+                    <p className="form-flash-message">{feedback}</p>
+                  </div>
+                ) : null}
               </form>
             </div>
           </div>

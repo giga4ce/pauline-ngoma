@@ -1657,23 +1657,67 @@
   display: none;
 }
  
-.form-feedback {
-  min-height: 1.5rem;
+.form-flash {
+  gap: var(--spacing-md);
+  display: flex;
   margin-top: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  animation: form-flash-enter 0.25s ease-out;
+  align-items: flex-start;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-level-1);
+}
+ 
+.form-flash-success {
+  color: #154734;
+  border-color: #b7e4c7;
+  background: linear-gradient(135deg, #effaf3 0%, #f7fcf9 100%);
+}
+ 
+.form-flash-error {
+  color: #912018;
+  border-color: #f3b3ad;
+  background: linear-gradient(135deg, #fff1f0 0%, #fff8f7 100%);
+}
+ 
+.form-flash-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  flex-shrink: 0;
+  align-items: center;
+  border-radius: 999px;
+  justify-content: center;
+}
+ 
+.form-flash-success .form-flash-icon {
+  color: white;
+  background-color: #1f7a4d;
+}
+ 
+.form-flash-error .form-flash-icon {
+  color: white;
+  background-color: #b42318;
+}
+ 
+.form-flash-message {
+  margin: 0;
   font-size: var(--font-size-sm);
-  line-height: 1.5;
+  line-height: 1.6;
 }
  
-.form-feedback-neutral {
-  color: var(--color-on-surface-secondary);
-}
- 
-.form-feedback-success {
-  color: #1f7a4d;
-}
- 
-.form-feedback-error {
-  color: #b42318;
+@keyframes form-flash-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
  
 .btn[disabled],
