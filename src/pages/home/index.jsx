@@ -5,9 +5,24 @@ import { Helmet } from 'react-helmet'
 
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
+import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import { useContactForm } from '@/hooks/useContactForm'
 import './home.scss'
 
 const Home = (props) => {
+  const {
+    feedback,
+    handleSubmit,
+    isError,
+    isSubmitting,
+    isSuccess,
+    resetFeedback,
+  } = useContactForm({
+    subject: 'Nouvelle demande depuis la page d’accueil',
+    successMessage:
+      'Votre demande a bien été envoyée. Le cabinet reviendra vers vous rapidement.',
+  })
+
   return (
     <div className="home-container1">
       <Helmet>
@@ -620,7 +635,7 @@ const Home = (props) => {
                   <div className="contact-text">
                     <span className="contact-label">Email</span>
                     <span className="contact-value">
-                      pauline.ngoma.avocat@gmail.com
+                      <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
                     </span>
                   </div>
                 </div>
@@ -652,10 +667,10 @@ const Home = (props) => {
             </div>
             <div className="contact-form-block">
               <form
-                action="#"
-                method="POST"
                 data-form-id="8876550f-271e-45f2-bca8-5d5bb3f1cc5c"
                 className="contact-form"
+                onChange={resetFeedback}
+                onSubmit={handleSubmit}
               >
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
@@ -664,8 +679,8 @@ const Home = (props) => {
                   <input
                     type="text"
                     id="name"
-                    name="true"
-                    required="true"
+                    name="nom"
+                    required
                     placeholder="Votre nom"
                     data-form-field-id="name"
                     className="form-input"
@@ -680,7 +695,7 @@ const Home = (props) => {
                       type="email"
                       id="email"
                       name="email"
-                      required="true"
+                      required
                       placeholder="votre@email.com"
                       data-form-field-id="email"
                       className="form-input"
@@ -693,7 +708,7 @@ const Home = (props) => {
                     <input
                       type="tel"
                       id="phone"
-                      name="phone"
+                      name="telephone"
                       placeholder="06 00 00 00 00"
                       data-form-field-id="phone"
                       className="form-input"
@@ -707,21 +722,48 @@ const Home = (props) => {
                   <textarea
                     id="message"
                     name="message"
-                    required="true"
+                    required
                     placeholder="Comment puis-je vous aider ?"
                     data-form-field-id="message"
                     className="form-textarea"
                   ></textarea>
                 </div>
+                <input
+                  type="text"
+                  name="_honey"
+                  tabIndex="-1"
+                  autoComplete="off"
+                  className="form-honeypot"
+                />
+                <input
+                  type="hidden"
+                  name="origine"
+                  value="Page d’accueil"
+                />
                 <button
                   id="thq_button_rKdI"
                   name="button"
                   type="submit"
                   data-form-field-id="thq_button_rKdI"
                   className="btn-accent btn btn-lg btn-full"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
                 >
-                  Prendre rendez-vous
+                  {isSubmitting ? 'Envoi en cours...' : 'Prendre rendez-vous'}
                 </button>
+                <p
+                  className={`form-feedback ${
+                    isSuccess
+                      ? 'form-feedback-success'
+                      : isError
+                        ? 'form-feedback-error'
+                        : 'form-feedback-neutral'
+                  }`}
+                  role="status"
+                  aria-live="polite"
+                >
+                  {feedback}
+                </p>
               </form>
             </div>
           </div>
@@ -777,17 +819,6 @@ transform: translateY(0);}}
     })
   })
 
-  // Form interaction feedback
-  const contactForm = document.querySelector(".contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      // Native behavior is preserved, but we can add a visual cue
-      const submitBtn = contactForm.querySelector('button[type="submit"]')
-      submitBtn.innerText = "Envoi en cours..."
-      submitBtn.style.opacity = "0.8"
-      submitBtn.style.pointerEvents = "none"
-    })
-  }
 })()
 </script>`}
           ></Script>

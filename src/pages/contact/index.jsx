@@ -1,12 +1,26 @@
 import React from 'react'
 
-import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
+import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import { useContactForm } from '@/hooks/useContactForm'
 import MainLayout from '@/layouts/MainLayout'
 import './contact.scss'
 
 const Contact = (props) => {
+  const {
+    feedback,
+    handleSubmit,
+    isError,
+    isSubmitting,
+    isSuccess,
+    resetFeedback,
+  } = useContactForm({
+    subject: 'Nouvelle demande depuis la page contact',
+    successMessage:
+      'Votre message a bien été envoyé. Le cabinet vous répondra sous 24 heures ouvrées.',
+  })
+
   return (
     <div className="contact-container1">
       <Helmet>
@@ -126,7 +140,9 @@ const Contact = (props) => {
                   </div>
                   <div className="info-content">
                     <h3 className="info-label">Email</h3>
-                    <p className="section-content">cabinet@avocat-prestige.fr</p>
+                    <p className="section-content">
+                      <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
+                    </p>
                   </div>
                 </div>
                 <div className="info-card">
@@ -177,144 +193,139 @@ const Contact = (props) => {
               </div>
               <div className="contact-form-panel">
                 <form
-                  action="/contact"
-                  method="POST"
                   data-form-id="767f1e8a-b0f2-49a7-a920-afd05f5b9ef7"
                   className="contact-contact-form"
+                  onChange={resetFeedback}
+                  onSubmit={handleSubmit}
                 >
-                <div className="contact-form-row">
-                  <div className="contact-form-group">
-                    <label htmlFor="nom" className="contact-form-label">
-                      Nom complet
-                    </label>
-                    <input
-                      type="text"
-                      id="nom"
-                      name="nom"
-                      required="true"
-                      placeholder="Jean Dupont"
-                      data-form-field-id="nom"
-                      className="contact-form-input"
-                    />
+                  <div className="contact-form-row">
+                    <div className="contact-form-group">
+                      <label htmlFor="nom" className="contact-form-label">
+                        Nom complet
+                      </label>
+                      <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        required
+                        placeholder="Jean Dupont"
+                        data-form-field-id="nom"
+                        className="contact-form-input"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div className="flex-row contact-form-row">
-                  <div className="contact-form-group">
-                    <label htmlFor="email" className="contact-form-label">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required="true"
-                      placeholder="jean@exemple.fr"
-                      data-form-field-id="email"
-                      className="contact-form-input"
-                    />
+                  <div className="flex-row contact-form-row">
+                    <div className="contact-form-group">
+                      <label htmlFor="email" className="contact-form-label">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="jean@exemple.fr"
+                        data-form-field-id="email"
+                        className="contact-form-input"
+                      />
+                    </div>
+                    <div className="contact-form-group">
+                      <label htmlFor="telephone" className="contact-form-label">
+                        Téléphone
+                      </label>
+                      <input
+                        type="tel"
+                        id="telephone"
+                        name="telephone"
+                        required
+                        placeholder="06 12 34 56 78"
+                        data-form-field-id="telephone"
+                        className="contact-form-input"
+                      />
+                    </div>
                   </div>
-                  <div className="contact-form-group">
-                    <label htmlFor="telephone" className="contact-form-label">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      name="telephone"
-                      required="true"
-                      placeholder="06 12 34 56 78"
-                      data-form-field-id="telephone"
-                      className="contact-form-input"
-                    />
+                  <div className="contact-form-row">
+                    <div className="contact-form-group">
+                      <label htmlFor="message" className="contact-form-label">
+                        Votre message
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        minLength={10}
+                        placeholder="Comment pouvons-nous vous aider ?"
+                        data-form-field-id="message"
+                        className="contact-form-input contact-form-textarea"
+                      ></textarea>
+                    </div>
                   </div>
-                </div>
-                <div className="contact-form-row">
-                  <div className="contact-form-group">
-                    <label htmlFor="message" className="contact-form-label">
-                      Votre message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required="true"
-                      minlength="10"
-                      placeholder="Comment pouvons-nous vous aider ?"
-                      data-form-field-id="message"
-                      className="contact-form-input contact-form-textarea"
-                    ></textarea>
-                  </div>
-                </div>
-                <div className="form-footer">
-                  <button
-                    id="thq_button_zCbQ"
-                    name="button"
-                    type="submit"
-                    data-form-field-id="thq_button_zCbQ"
-                    className="btn-accent btn btn-lg submit-button"
-                  >
-                    <span>Envoyer la demande</span>
-                    <svg
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="20"
-                      viewBox="0 0 24 24"
+                  <input
+                    type="text"
+                    name="_honey"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    className="form-honeypot"
+                  />
+                  <input
+                    type="hidden"
+                    name="origine"
+                    value="Page contact"
+                  />
+                  <div className="form-footer">
+                    <button
+                      id="thq_button_zCbQ"
+                      name="button"
+                      type="submit"
+                      data-form-field-id="thq_button_zCbQ"
+                      className="btn-accent btn btn-lg submit-button"
+                      disabled={isSubmitting}
+                      aria-busy={isSubmitting}
                     >
-                      <path
-                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11zm7.318-19.539l-10.94 10.939"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </button>
-                  <p className="form-disclaimer">
-                    Confidentialité garantie. Nous vous répondrons sous 24
-                    heures ouvrées.
-                  </p>
-                </div>
+                      <span>
+                        {isSubmitting
+                          ? 'Envoi en cours...'
+                          : 'Envoyer la demande'}
+                      </span>
+                      <svg
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11zm7.318-19.539l-10.94 10.939"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                    <p className="form-disclaimer">
+                      Confidentialité garantie. Nous vous répondrons sous 24
+                      heures ouvrées.
+                    </p>
+                    <p
+                      className={`form-feedback ${
+                        isSuccess
+                          ? 'form-feedback-success'
+                          : isError
+                            ? 'form-feedback-error'
+                            : 'form-feedback-neutral'
+                      }`}
+                      role="status"
+                      aria-live="polite"
+                    >
+                      {feedback}
+                    </p>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </section>
-        <div className="contact-container2">
-          <div className="contact-container3">
-            <Script
-              html={`<script>
-(function(){
-  const contactForm = document.querySelector(".contact-form")
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      const submitBtn = contactForm.querySelector(".submit-button")
-      const originalText = submitBtn.innerHTML
-
-      submitBtn.disabled = true
-      submitBtn.innerHTML = "Envoi en cours..."
-
-      setTimeout(() => {
-        submitBtn.style.backgroundColor = "#2ecc71"
-        submitBtn.style.borderColor = "#2ecc71"
-        submitBtn.innerHTML = "Message envoyé avec succès"
-
-        contactForm.reset()
-
-        setTimeout(() => {
-          submitBtn.disabled = false
-          submitBtn.innerHTML = originalText
-          submitBtn.style.backgroundColor = ""
-          submitBtn.style.borderColor = ""
-        }, 3000)
-      }, 1500)
-    })
-  }
-})()
-</script>`}
-            ></Script>
-          </div>
-        </div>
       </MainLayout>
     </div>
   )
