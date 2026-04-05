@@ -2,7 +2,13 @@ import React, { Fragment } from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import {
+  CABINET_ADDRESS_LINES,
+  CABINET_EMAIL,
+  CABINET_EMAIL_HREF,
+  CABINET_PHONE,
+  CABINET_PHONE_HREF,
+} from '@/config/cabinet'
 import { useContactForm } from '@/hooks/useContactForm'
 import MainLayout from '@/layouts/MainLayout'
 
@@ -75,9 +81,9 @@ const Contact = () => {
                   <div className="info-content">
                     <h3 className="info-label">Adresse du Cabinet</h3>
                     <p className="section-content">
-                      12 Avenue des Champs-Élysées
+                      {CABINET_ADDRESS_LINES[0]}
                       <br />
-                      75008 Paris, France
+                      {CABINET_ADDRESS_LINES[1]}
                     </p>
                   </div>
                 </div>
@@ -101,7 +107,9 @@ const Contact = () => {
                   </div>
                   <div className="info-content">
                     <h3 className="info-label">Téléphone</h3>
-                    <p className="section-content">+33 (0)1 40 50 60 70</p>
+                    <p className="section-content">
+                      <a href={CABINET_PHONE_HREF}>{CABINET_PHONE}</a>
+                    </p>
                   </div>
                 </div>
                 <div className="info-card">

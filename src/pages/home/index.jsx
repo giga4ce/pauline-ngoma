@@ -6,7 +6,13 @@ import { Helmet } from 'react-helmet'
 
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import {
+  CABINET_ADDRESS_LINES,
+  CABINET_EMAIL,
+  CABINET_EMAIL_HREF,
+  CABINET_PHONE,
+  CABINET_PHONE_HREF,
+} from '@/config/cabinet'
 import { useContactForm } from '@/hooks/useContactForm'
 
 const Home = () => {
@@ -627,7 +633,9 @@ const Home = () => {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Téléphone</span>
-                    <span className="contact-value">+33 (0)6 59 81 24 53</span>
+                    <span className="contact-value">
+                      <a href={CABINET_PHONE_HREF}>{CABINET_PHONE}</a>
+                    </span>
                   </div>
                 </div>
                 <div className="contact-detail-item">
@@ -674,7 +682,7 @@ const Home = () => {
                   <div className="contact-text">
                     <span className="contact-label">Adresse</span>
                     <span className="contact-value">
-                      42 Avenue Victor Hugo, 13100 Aix En Provence
+                      {CABINET_ADDRESS_LINES.join(', ')}
                     </span>
                   </div>
                 </div>
