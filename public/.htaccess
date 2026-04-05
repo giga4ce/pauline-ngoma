@@ -1,6 +1,11 @@
 Options -MultiViews
 RewriteEngine On
 
+# Force HTTPS and the canonical www hostname.
+RewriteCond %{HTTP_HOST} !^www\.pauline-ngoma-mabala\.fr$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://www.pauline-ngoma-mabala.fr%{REQUEST_URI} [R=301,L]
+
 # Serve real files and directories as-is.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d

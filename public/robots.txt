@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://paulinengomamabala-avocat.teleporthq.site/sitemap.xml
+Sitemap: https://www.pauline-ngoma-mabala.fr/sitemap.xml

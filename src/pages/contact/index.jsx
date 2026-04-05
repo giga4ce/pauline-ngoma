@@ -23,11 +23,14 @@ const Contact = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Contact - Full Pricey Quetzal</title>
-        <meta property="og:title" content="Contact - Full Pricey Quetzal" />
+        <title>Contact | Maître Pauline NGOMA-MABALA</title>
+        <meta
+          property="og:title"
+          content="Contact | Maître Pauline NGOMA-MABALA"
+        />
         <link
           rel="canonical"
-          href="https://paulinengomamabala-avocat.teleporthq.site/contact"
+          href="https://www.pauline-ngoma-mabala.fr/contact"
         />
       </Helmet>
       <MainLayout>
