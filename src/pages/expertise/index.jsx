@@ -37,7 +37,7 @@ const Expertise = () => {
             <div className="content-limit">
               <span className="hero-pretitle">Excellence &amp; Engagement</span>
               <h1 className="expertise-hero-title hero-title">
-                Nos Domaines d&apos;Expertise
+                Mes Domaines d&apos;Expertise
               </h1>
               <p className="expertise-hero-description hero-subtitle">
                 Une défense d&apos;excellence, un accompagnement sur mesure pour

@@ -24,5 +24,5 @@ test('renders CTA heading and actions', () => {
 
   expect(container.textContent).toContain('Besoin d\'un conseil juridique ?')
   expect(container.textContent).toContain('Prendre rendez-vous')
-  expect(container.textContent).toContain('Nous contacter')
+  expect(container.textContent).toContain('Me contacter')
 })

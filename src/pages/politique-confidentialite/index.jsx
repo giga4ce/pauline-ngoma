@@ -2,7 +2,11 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import {
+  CABINET_ADDRESS_LINES,
+  CABINET_EMAIL,
+  CABINET_EMAIL_HREF,
+} from '@/config/cabinet'
 import MainLayout from '@/layouts/MainLayout'
 
 const PolitiqueConfidentialite = () => {
@@ -10,11 +14,11 @@ const PolitiqueConfidentialite = () => {
     <div className="legal-page-container">
       <Helmet>
         <title>
-          Politique de confidentialité - Cabinet Pauline NGOMA-MABALA
+          Politique de confidentialité | Maître Pauline NGOMA-MABALA
         </title>
         <meta
           property="og:title"
-          content="Politique de confidentialité - Cabinet Pauline NGOMA-MABALA"
+          content="Politique de confidentialité | Maître Pauline NGOMA-MABALA"
         />
       </Helmet>
       <MainLayout>
@@ -30,8 +34,10 @@ const PolitiqueConfidentialite = () => {
               <section className="legal-section">
                 <h2 className="section-title">Responsable du traitement</h2>
                 <p className="section-content">
-                  Le responsable du traitement des données personnelles est le
-                  Cabinet de Maître Pauline NGOMA-MABALA.
+                  Le responsable du traitement des données personnelles est
+                  Maître Pauline NGOMA-MABALA, avocate au barreau
+                  d&apos;Aix-en-Provence, domiciliée {CABINET_ADDRESS_LINES[0]},
+                  {` ${CABINET_ADDRESS_LINES[1]}`}.
                 </p>
               </section>
 
@@ -57,7 +63,8 @@ const PolitiqueConfidentialite = () => {
                   Les données sont utilisées pour répondre aux demandes
                   d&apos;information, organiser un rendez-vous et assurer le
                   suivi des échanges. Le traitement repose sur votre
-                  consentement et sur l&apos;intérêt légitime du cabinet à
+                  consentement et sur l&apos;intérêt légitime de Maître Pauline
+                  NGOMA-MABALA à
                   traiter les sollicitations reçues.
                 </p>
               </section>
@@ -74,8 +81,9 @@ const PolitiqueConfidentialite = () => {
               <section className="legal-section">
                 <h2 className="section-title">Destinataires</h2>
                 <p className="section-content">
-                  Les données sont destinées exclusivement au cabinet et à ses
-                  prestataires techniques strictement nécessaires au
+                  Les données sont destinées exclusivement à Maître Pauline
+                  NGOMA-MABALA et, le cas échéant, à ses prestataires techniques
+                  strictement nécessaires au
                   fonctionnement du site.
                 </p>
               </section>
@@ -98,9 +106,12 @@ const PolitiqueConfidentialite = () => {
               <section className="legal-section">
                 <h2 className="section-title">Mise à jour</h2>
                 <p className="section-content">
-                  Cette politique peut être mise à jour à tout moment. La date
-                  de dernière mise à jour doit être renseignée avant mise en
-                  production.
+                  Cette politique peut être mise à jour à tout moment afin de
+                  refléter les évolutions légales, techniques ou
+                  organisationnelles du site.
+                </p>
+                <p className="section-content">
+                  Dernière mise à jour : 6 avril 2026.
                 </p>
               </section>
             </div>

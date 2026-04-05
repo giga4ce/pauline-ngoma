@@ -2,17 +2,23 @@ import React from 'react'
 
 import { Helmet } from 'react-helmet'
 
-import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import {
+  CABINET_ADDRESS_LINES,
+  CABINET_EMAIL,
+  CABINET_EMAIL_HREF,
+  CABINET_PHONE,
+  CABINET_PHONE_HREF,
+} from '@/config/cabinet'
 import MainLayout from '@/layouts/MainLayout'
 
 const MentionsLegales = () => {
   return (
     <div className="legal-page-container">
       <Helmet>
-        <title>Mentions légales - Cabinet Pauline NGOMA-MABALA</title>
+        <title>Mentions légales | Maître Pauline NGOMA-MABALA</title>
         <meta
           property="og:title"
-          content="Mentions légales - Cabinet Pauline NGOMA-MABALA"
+          content="Mentions légales | Maître Pauline NGOMA-MABALA"
         />
       </Helmet>
       <MainLayout>
@@ -28,14 +34,18 @@ const MentionsLegales = () => {
               <section className="legal-section">
                 <h2 className="section-title">Éditeur du site</h2>
                 <p className="section-content">
-                  Le présent site est édité par le Cabinet de Maître Pauline
-                  NGOMA-MABALA.
+                  Le présent site est édité par Maître Pauline NGOMA-MABALA,
+                  avocate au barreau d&apos;Aix-en-Provence.
                 </p>
                 <ul className="legal-list section-content">
-                  <li>Adresse: 12 Avenue des Champs-Élysées, 75008 Paris</li>
-                  <li>Téléphone: +33 (0)1 40 50 60 70</li>
                   <li>
-                    Email: <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
+                    Adresse: {CABINET_ADDRESS_LINES[0]}, {CABINET_ADDRESS_LINES[1]}
+                  </li>
+                  <li>
+                    Téléphone: <a href={CABINET_PHONE_HREF}>{CABINET_PHONE}</a>
+                  </li>
+                  <li>
+                    Email : <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
                   </li>
                 </ul>
               </section>
@@ -51,9 +61,8 @@ const MentionsLegales = () => {
               <section className="legal-section">
                 <h2 className="section-title">Hébergement</h2>
                 <p className="section-content">
-                  Le site est hébergé par un prestataire technique. Les
-                  informations complètes de l&apos;hébergeur (raison sociale,
-                  adresse, téléphone) sont à compléter avant mise en production.
+                  Le site est hébergé par OVH SAS, 2 rue Kellermann, 59100
+                  Roubaix, France.
                 </p>
               </section>
 
@@ -73,7 +82,7 @@ const MentionsLegales = () => {
                 <p className="section-content">
                   Les informations publiées sur ce site sont fournies à titre
                   informatif. Elles ne constituent pas un conseil juridique
-                  personnalisé. Le cabinet ne saurait être tenu responsable de
+                  personnalisé. Maître Pauline NGOMA-MABALA ne saurait être tenue responsable de
                   l&apos;utilisation faite des informations diffusées.
                 </p>
               </section>

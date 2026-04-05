@@ -25,7 +25,7 @@ test('renders values content with emphasis classes', () => {
     )
   })
 
-  expect(container.textContent).toContain('Notre Engagement')
+  expect(container.textContent).toContain('Mon Engagement')
   expect(container.textContent).toContain('Excellence :')
   expect(container.querySelector('.first-emphasis')).not.toBeNull()
   expect(container.querySelector('.second-emphasis')).not.toBeNull()

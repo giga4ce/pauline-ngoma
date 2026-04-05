@@ -189,9 +189,9 @@ const Honoraires = () => {
       </section>
       <section className="cta-section">
         <div className="cta-container">
-          <h2 className="section-title">Une question sur nos tarifs ?</h2>
+          <h2 className="section-title">Une question sur mes honoraires ?</h2>
           <p className="section-content">
-            Chaque situation est unique. Contactez le cabinet pour une
+            Chaque situation est unique. Contactez-moi pour une
             estimation personnalisée de vos besoins.
           </p>
           <div className="cta-buttons">
@@ -202,7 +202,7 @@ const Honoraires = () => {
             </a>
             <a href="#">
               <div className="btn btn-outline">
-                <span>Nous contacter</span>
+                <span>Me contacter</span>
               </div>
             </a>
           </div>
