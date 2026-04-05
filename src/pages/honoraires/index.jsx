@@ -9,11 +9,14 @@ const Honoraires = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Honoraires - Full Pricey Quetzal</title>
-        <meta property="og:title" content="Honoraires - Full Pricey Quetzal" />
+        <title>Honoraires | Maître Pauline NGOMA-MABALA</title>
+        <meta
+          property="og:title"
+          content="Honoraires | Maître Pauline NGOMA-MABALA"
+        />
         <link
           rel="canonical"
-          href="https://paulinengomamabala-avocat.teleporthq.site/honoraires"
+          href="https://www.pauline-ngoma-mabala.fr/honoraires"
         />
       </Helmet>
       <MainLayout>

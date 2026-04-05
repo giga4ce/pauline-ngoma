@@ -25,11 +25,14 @@ const Home = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Full Pricey Quetzal</title>
-        <meta property="og:title" content="Full Pricey Quetzal" />
+        <title>Maître Pauline NGOMA-MABALA | Avocate au Barreau à Paris</title>
+        <meta
+          property="og:title"
+          content="Maître Pauline NGOMA-MABALA | Avocate au Barreau à Paris"
+        />
         <link
           rel="canonical"
-          href="https://paulinengomamabala-avocat.teleporthq.site/"
+          href="https://www.pauline-ngoma-mabala.fr/"
         />
       </Helmet>
       <Navigation></Navigation>

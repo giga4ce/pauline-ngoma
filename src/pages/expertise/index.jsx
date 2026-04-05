@@ -12,11 +12,14 @@ const Expertise = () => {
   return (
     <>
       <Helmet>
-        <title>Expertise - Full Pricey Quetzal</title>
-        <meta property="og:title" content="Expertise - Full Pricey Quetzal" />
+        <title>Expertise | Maître Pauline NGOMA-MABALA</title>
+        <meta
+          property="og:title"
+          content="Expertise | Maître Pauline NGOMA-MABALA"
+        />
         <link
           rel="canonical"
-          href="https://paulinengomamabala-avocat.teleporthq.site/expertise"
+          href="https://www.pauline-ngoma-mabala.fr/expertise"
         />
       </Helmet>
       <Navigation />
