@@ -30,9 +30,9 @@ const ExpertiseGridSection = () => {
           <div className="card-content">
             <h2 className="section-title">Droit du dommage corporel</h2>
             <p className="section-content">
-              Nous accompagnons les victimes d&apos;accidents de la route,
+              J&apos;accompagne les victimes d&apos;accidents de la route,
               d&apos;erreurs médicales ou d&apos;agressions pour obtenir une
-              réparation intégrale de leurs préjudices. Notre approche combine
+              réparation intégrale de leurs préjudices. Mon approche combine
               expertise juridique et sensibilité humaine pour garantir que
               chaque victime reçoive l&apos;indemnisation juste qu&apos;elle
               mérite face aux compagnies d&apos;assurances et aux tribunaux.
@@ -70,10 +70,10 @@ const ExpertiseGridSection = () => {
           <div className="card-content">
             <h2 className="section-title">Droit de la famille</h2>
             <p className="section-content">
-              Le cabinet intervient avec discrétion et fermeté dans les
+              J&apos;interviens avec discrétion et fermeté dans les
               procédures de divorce, de séparation, ainsi que pour les questions
               relatives à l&apos;autorité parentale et à la pension alimentaire.
-              Nous privilégions les solutions amiables lorsque possible, tout en
+              Je privilégie les solutions amiables lorsque possible, tout en
               protégeant vigoureusement vos intérêts et ceux de vos enfants
               devant le juge aux affaires familiales.
             </p>
@@ -112,7 +112,7 @@ const ExpertiseGridSection = () => {
             <p className="section-content">
               Conseil et assistance pour les demandes de titres de séjour, les
               recours contre les mesures d&apos;éloignement (OQTF) et les
-              procédures de naturalisation. Nous mettons notre connaissance
+              procédures de naturalisation. Je mets ma connaissance
               approfondie du code de l&apos;entrée et du séjour des étrangers au
               service de votre projet de vie en France, en vous guidant à
               travers les complexités administratives et judiciaires.
@@ -148,10 +148,10 @@ const ExpertiseGridSection = () => {
           <div className="card-content">
             <h2 className="section-title">Droit pénal des victimes</h2>
             <p className="section-content">
-              Nous assurons la défense exclusive des victimes
+              J&apos;assure la défense exclusive des victimes
               d&apos;infractions pénales à chaque étape de la procédure : du
               dépôt de plainte jusqu&apos;à l&apos;audience devant le Tribunal
-              Correctionnel ou la Cour d&apos;Assises. Notre mission est de
+              Correctionnel ou la Cour d&apos;Assises. Ma mission est de
               porter votre voix, de faire reconnaître votre statut de victime et
               d&apos;obtenir la sanction de l&apos;auteur ainsi que la réparation
               de vos préjudices.

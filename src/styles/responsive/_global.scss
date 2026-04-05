@@ -6,6 +6,25 @@
   line-height: 1.6;
   letter-spacing: 0.01em;
 }
+
+@media(max-width: 1024px) {
+  .navigation-desktop-menu {
+    display: none;
+  }
+  .navigation-toggle {
+    display: block;
+  }
+  .navigation-brand-details {
+    display: none;
+  }
+  .hero-principal-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-principal-actions {
+    justify-content: center;
+  }
+}
  
 @media(max-width: 991px) {
   .navigation-desktop-menu {
@@ -153,22 +172,6 @@
   }
   .footer-logo-text {
     font-size: var(--font-size-xl);
-  }
-  .navigation-desktop-menu {
-    display: none;
-  }
-  .navigation-toggle {
-    display: block;
-  }
-  .navigation-brand-details {
-    display: none;
-  }
-  .hero-principal-content {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .hero-principal-actions {
-    justify-content: center;
   }
   .domaines-grid {
     grid-template-columns: 1fr;

@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
-import { CABINET_EMAIL, CABINET_EMAIL_HREF } from '@/config/cabinet'
+import {
+  CABINET_ADDRESS_LINES,
+  CABINET_EMAIL,
+  CABINET_EMAIL_HREF,
+} from '@/config/cabinet'
 
 const Navigation = () => {
   const handleHomeBrandClick = () => {
@@ -118,35 +122,46 @@ const Navigation = () => {
           </button>
         </div>
         <div className="navigation-overlay-content">
+          <div className="navigation-mobile-section">
+            <span className="navigation-mobile-eyebrow">Navigation</span>
+          </div>
           <ul className="navigation-mobile-links">
             <li>
-              <Link className="navigation-mobile-link hero-title" to="/expertise">
+              <Link className="navigation-mobile-link" to="/expertise">
                 Expertise
               </Link>
             </li>
             <li>
-              <Link className="navigation-mobile-link hero-title" to="/cabinet">
+              <Link className="navigation-mobile-link" to="/cabinet">
                 Cabinet
               </Link>
             </li>
             <li>
-              <Link className="navigation-mobile-link hero-title" to="/honoraires">
+              <Link className="navigation-mobile-link" to="/honoraires">
                 Honoraires
               </Link>
             </li>
             <li>
-              <Link className="navigation-mobile-link hero-title" to="/contact">
+              <Link className="navigation-mobile-link" to="/contact">
                 Contact
               </Link>
             </li>
           </ul>
           <div className="navigation-mobile-footer">
-            <Link className="btn btn-primary btn-lg" to="/contact">
+            <Link className="btn btn-primary navigation-mobile-cta" to="/contact">
               Prendre rendez-vous
             </Link>
             <div className="navigation-mobile-info">
-              <p className="section-content">75008 Paris, France</p>
+              <span className="navigation-mobile-eyebrow">Coordonnées</span>
               <p className="section-content">
+                {CABINET_ADDRESS_LINES.map((line) => (
+                  <React.Fragment key={line}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
+              <p className="section-content navigation-mobile-email">
                 <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
               </p>
             </div>
@@ -213,7 +228,7 @@ const Navigation = () => {
             link.addEventListener("click", closeMenu)
           })
           window.addEventListener("resize", () => {
-            if (window.innerWidth > 767 && mobileOverlay.style.display === "flex") {
+            if (window.innerWidth > 1024 && mobileOverlay.style.display === "flex") {
               closeMenu()
             }
           })

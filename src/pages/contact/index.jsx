@@ -17,7 +17,7 @@ const Contact = () => {
   } = useContactForm({
     subject: 'Nouvelle demande depuis la page contact',
     successMessage:
-      'Votre message a bien été envoyé. Le cabinet vous répondra sous 24 heures ouvrées.',
+      'Votre message a bien été envoyé. Je vous répondrai sous 24 heures ouvrées.',
   })
 
   return (
@@ -224,7 +224,7 @@ const Contact = () => {
                         name="message"
                         required
                         minLength={10}
-                        placeholder="Comment pouvons-nous vous aider ?"
+                        placeholder="Comment puis-je vous aider ?"
                         data-form-field-id="message"
                         className="contact-form-input contact-form-textarea"
                       ></textarea>
@@ -274,7 +274,7 @@ const Contact = () => {
                       </svg>
                     </button>
                     <p className="form-disclaimer">
-                      Confidentialité garantie. Nous vous répondrons sous 24
+                      Confidentialité garantie. Je vous répondrai sous 24
                       heures ouvrées.
                     </p>
                     {feedback ? (

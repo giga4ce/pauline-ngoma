@@ -1,15 +1,15 @@
 import React from 'react'
 
-const ValuesSection = () => {
+const ValuesSection = ({ emphasisClasses = [] }) => {
   return (
     <section className="expertise-values">
       <div className="content-limit">
         <div className="values-flex-container">
           <div className="values-content">
-            <h2 className="section-title">Notre Engagement</h2>
+            <h2 className="section-title">Mon Engagement</h2>
             <p className="section-content">
               Chaque dossier est traité avec une exigence d&apos;excellence et
-              une discrétion absolue. Notre cabinet s&apos;engage à vos côtés
+              une discrétion absolue. Je m&apos;engage à vos côtés
               pour transformer la complexité juridique en solutions claires et
               pérennes.
             </p>
@@ -17,21 +17,31 @@ const ValuesSection = () => {
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <strong className="values-emphasis">Excellence :</strong>{' '}
+                  <strong
+                    className={`values-emphasis ${emphasisClasses[0] || ''}`.trim()}
+                  >
+                    Excellence :
+                  </strong>{' '}
                   Une rigueur juridique sans compromis.
                 </span>
               </li>
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <strong className="values-emphasis">Dévouement :</strong>{' '}
-                  Votre cause au centre de notre stratégie.
+                  <strong
+                    className={`values-emphasis ${emphasisClasses[1] || ''}`.trim()}
+                  >
+                    Dévouement :
+                  </strong>{' '}
+                  Votre cause au centre de ma stratégie.
                 </span>
               </li>
               <li className="value-item">
                 <span className="value-dot"></span>
                 <span className="section-content">
-                  <strong className="values-emphasis">
+                  <strong
+                    className={`values-emphasis ${emphasisClasses[2] || ''}`.trim()}
+                  >
                     Professionnalisme :
                   </strong>{' '}
                   Une éthique irréprochable.

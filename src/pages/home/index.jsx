@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
@@ -19,7 +20,7 @@ const Home = () => {
   } = useContactForm({
     subject: 'Nouvelle demande depuis la page d’accueil',
     successMessage:
-      'Votre demande a bien été envoyée. Le cabinet reviendra vers vous rapidement.',
+      'Votre demande a bien été envoyée. Je reviendrai vers vous rapidement.',
   })
 
   return (
@@ -106,9 +107,9 @@ const Home = () => {
                   stratégie juridique possible face aux épreuves de la vie.
                 </p>
               </div>
-              <a href="#expertises">
+              <Link to="/expertise">
                 <div className="presentation-link btn btn-link">
-                  <span>En savoir plus sur mon parcours</span>
+                  <span>Découvrir le détail de mes expertises</span>
                   <svg
                     fill="none"
                     width="20"
@@ -123,7 +124,7 @@ const Home = () => {
                     <path d="M5 12h14m-7-7 7 7-7 7"></path>
                   </svg>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -245,11 +246,11 @@ const Home = () => {
             </article>
           </div>
           <div className="domaines-cta">
-            <a href="#expertises">
+            <Link to="/expertise">
               <div className="btn btn-outline">
-                <span>Voir tous les domaines</span>
+                <span>Voir le détail de mes expertises</span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -282,7 +283,7 @@ const Home = () => {
               </div>
               <h3 className="valeur-title">Confidentialité</h3>
               <p className="section-content">
-                Le secret professionnel est le socle de notre relation. Vos
+                Le secret professionnel est le socle de ma relation avec vous. Vos
                 échanges sont protégés avec la plus grande rigueur.
               </p>
             </div>
@@ -603,7 +604,7 @@ const Home = () => {
         <div className="contact-container">
           <div className="contact-grid">
             <div className="contact-info-block">
-              <h2 className="section-title">Contactez le Cabinet</h2>
+              <h2 className="section-title">Contactez-moi</h2>
               <p className="section-subtitle">
                 Maître Pauline NGOMA-MABALA vous répond
               </p>

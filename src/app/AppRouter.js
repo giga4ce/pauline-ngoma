@@ -9,23 +9,27 @@ import Cabinet from '@/pages/cabinet'
 import MentionsLegales from '@/pages/mentions-legales'
 import PolitiqueConfidentialite from '@/pages/politique-confidentialite'
 import NotFound from '@/pages/not-found'
+import ScrollToTop from '@/app/ScrollToTop'
 
 const AppRouter = () => {
   return (
-    <Switch>
-      <Route component={Expertise} exact path="/expertise" />
-      <Route component={Honoraires} exact path="/honoraires" />
-      <Route component={Home} exact path="/" />
-      <Route component={Contact} exact path="/contact" />
-      <Route component={Cabinet} exact path="/cabinet" />
-      <Route component={MentionsLegales} exact path="/mentions-legales" />
-      <Route
-        component={PolitiqueConfidentialite}
-        exact
-        path="/politique-de-confidentialite"
-      />
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
+        <Route component={Expertise} exact path="/expertise" />
+        <Route component={Honoraires} exact path="/honoraires" />
+        <Route component={Home} exact path="/" />
+        <Route component={Contact} exact path="/contact" />
+        <Route component={Cabinet} exact path="/cabinet" />
+        <Route component={MentionsLegales} exact path="/mentions-legales" />
+        <Route
+          component={PolitiqueConfidentialite}
+          exact
+          path="/politique-de-confidentialite"
+        />
+        <Route component={NotFound} />
+      </Switch>
+    </>
   )
 }
 

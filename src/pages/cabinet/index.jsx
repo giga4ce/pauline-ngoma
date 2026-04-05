@@ -33,7 +33,7 @@ const Cabinet = () => {
           </div>
           <div className="cabinet-expertise-hero-content-container">
             <div className="cabinet-content-limit content-limit">
-              <h1 className="hero-title">Un cabinet engagé à vos côtés</h1>
+              <h1 className="hero-title">Une avocate engagée à vos côtés</h1>
               <p className="hero-subtitle">
                 Expertise, proximité et défense rigoureuse de vos intérêts.
               </p>
@@ -45,7 +45,7 @@ const Cabinet = () => {
                 </Link>
                 <a href="#vision">
                   <div className="btn btn-lg btn-outline">
-                    <span>Découvrir le cabinet</span>
+                    <span>Découvrir mon approche</span>
                   </div>
                 </a>
               </div>
@@ -55,12 +55,12 @@ const Cabinet = () => {
         <section id="vision" className="cabinet-vision-section">
           <div className="cabinet-content-limit content-limit">
             <div className="section-header-centered">
-              <h2 className="section-title">Notre Cabinet</h2>
+              <h2 className="section-title">Ma pratique</h2>
               <div className="accent-line"></div>
               <p className="max-width-700 section-content">
                 Ancré dans une tradition d&apos;excellence et tourné vers
-                l&apos;avenir, notre cabinet accompagne ses clients avec une
-                rigueur absolue et une discrétion totale.
+                l&apos;avenir, j&apos;accompagne mes clients avec une rigueur
+                absolue et une discrétion totale.
               </p>
             </div>
             <div className="cabinet-values-grid1">
@@ -105,7 +105,7 @@ const Cabinet = () => {
                 </div>
                 <h3 className="card-title">Confidentialité</h3>
                 <p className="section-content">
-                  Le secret professionnel est le socle de notre relation de
+                  Le secret professionnel est le socle de ma relation de
                   confiance avec chaque client.
                 </p>
               </div>
@@ -174,17 +174,17 @@ const Cabinet = () => {
               </div>
               <div className="approach-content-side">
                 <span className="section-subtitle">Méthodologie</span>
-                <h2 className="section-title">Notre Approche</h2>
+                <h2 className="section-title">Mon Approche</h2>
                 <p className="section-content">
-                  Nous croyons qu&apos;une défense efficace repose sur une
-                  compréhension profonde de la situation humaine de nos clients.
+                  Je crois qu&apos;une défense efficace repose sur une
+                  compréhension profonde de la situation humaine de mes clients.
                   Chaque stratégie est élaborée sur mesure, après une écoute
                   attentive et une analyse prospective des enjeux.
                 </p>
                 <p className="section-content">
-                  Notre cabinet privilégie une approche proactive, anticipant
+                  Je privilégie une approche proactive, anticipant
                   les obstacles juridiques pour sécuriser vos intérêts sur le
-                  long terme. Nous vous accompagnons à chaque étape, de la
+                  long terme. Je vous accompagne à chaque étape, de la
                   consultation initiale jusqu&apos;à la résolution finale de
                   votre litige.
                 </p>
@@ -205,9 +205,9 @@ const Cabinet = () => {
         <section className="engagements-section">
           <div className="cabinet-content-limit content-limit">
             <div className="grid-header">
-              <h2 className="section-title">Nos Engagements</h2>
+              <h2 className="section-title">Mes Engagements</h2>
               <p className="section-content">
-                Quatre piliers fondamentaux qui guident notre pratique
+                Quatre piliers fondamentaux qui guident ma pratique
                 quotidienne.
               </p>
             </div>
@@ -219,7 +219,7 @@ const Cabinet = () => {
                 <div className="engagement-text">
                   <h3 className="card-title">Écoute active</h3>
                   <p className="section-content">
-                    Nous prenons le temps nécessaire pour comprendre vos besoins
+                    Je prends le temps nécessaire pour comprendre vos besoins
                     réels et vos objectifs personnels.
                   </p>
                 </div>
@@ -231,7 +231,7 @@ const Cabinet = () => {
                 <div className="engagement-text">
                   <h3 className="card-title">Réactivité</h3>
                   <p className="section-content">
-                    Le temps est un facteur clé en droit. Nous nous engageons à
+                    Le temps est un facteur clé en droit. Je m&apos;engage à
                     traiter vos demandes dans les plus brefs délais.
                   </p>
                 </div>
@@ -255,7 +255,7 @@ const Cabinet = () => {
                 <div className="engagement-text">
                   <h3 className="card-title">Stratégie personnalisée</h3>
                   <p className="section-content">
-                    Pas de solutions génériques. Nous bâtissons une défense
+                    Pas de solutions génériques. Je bâtis une défense
                     unique adaptée à la complexité de votre dossier.
                   </p>
                 </div>
@@ -270,8 +270,7 @@ const Cabinet = () => {
                 Besoin d&apos;un conseil juridique ?
               </h2>
               <p className="section-content">
-                Le cabinet vous accueille sur rendez-vous pour étudier votre
-                situation.
+                Je vous reçois sur rendez-vous pour étudier votre situation.
               </p>
               <Link to="/contact">
                 <div className="btn btn-accent btn-xl">
