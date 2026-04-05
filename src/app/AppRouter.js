@@ -9,7 +9,7 @@ import Cabinet from '@/pages/cabinet'
 import MentionsLegales from '@/pages/mentions-legales'
 import PolitiqueConfidentialite from '@/pages/politique-confidentialite'
 import NotFound from '@/pages/not-found'
-import ScrollToTop from '@/app/ScrollToTop'
+import ScrollToTop from './ScrollToTop'
 
 const AppRouter = () => {
   return (
