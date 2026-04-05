@@ -18,9 +18,9 @@ const Footer = () => {
               </span>
             </div>
             <p className="section-content footer-description">
-              Excellence in legal defense and dedicated support for victims.
-              Providing sophisticated legal solutions with discretion and
-              commitment.
+              Maître Pauline NGOMA-MABALA vous accompagne avec rigueur,
+              discrétion et engagement en dommage corporel, droit de la
+              famille, droit des étrangers et droit pénal des victimes.
             </p>
           </div>
           <div className="footer-socials">
