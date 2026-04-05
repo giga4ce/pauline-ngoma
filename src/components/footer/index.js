@@ -14,7 +14,7 @@ const Footer = () => {
                 Maître Pauline NGOMA-MABALA
               </span>
               <span className="footer-logo-tagline">
-                Cabinet d&apos;Avocat au Barreau
+                Cabinet d&apos;avocat au barreau d&apos;Aix-en-Provence
               </span>
             </div>
             <p className="section-content footer-description">
