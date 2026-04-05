@@ -27,7 +27,7 @@ const Navigation = () => {
                   Maître Pauline NGOMA-MABALA
                 </span>
                 <span className="navigation-brand-tagline">
-                  Avocate au Barreau
+                  Avocate au barreau d&apos;Aix-en-Provence
                 </span>
               </div>
             </div>

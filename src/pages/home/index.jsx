@@ -25,10 +25,12 @@ const Home = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Maître Pauline NGOMA-MABALA | Avocate au Barreau à Paris</title>
+        <title>
+          Maître Pauline NGOMA-MABALA | Avocate au barreau d&apos;Aix-en-Provence
+        </title>
         <meta
           property="og:title"
-          content="Maître Pauline NGOMA-MABALA | Avocate au Barreau à Paris"
+          content="Maître Pauline NGOMA-MABALA | Avocate au barreau d'Aix-en-Provence"
         />
         <link
           rel="canonical"
@@ -51,7 +53,7 @@ const Home = () => {
               Maître Pauline NGOMA-MABALA
             </h1>
             <p className="hero-subtitle">
-              Avocate au Barreau – Défense et accompagnement des victimes
+              Avocate au barreau d&apos;Aix-en-Provence – Défense et accompagnement des victimes
             </p>
             <p className="hero-description section-content">
               Dédiée à la protection de vos droits avec excellence et humanité.
