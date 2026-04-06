@@ -10,6 +10,11 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-branding">
             <div className="footer-logo-group">
+              <img
+                alt="Logo Maître Pauline NGOMA MABALA"
+                className="footer-logo-mark"
+                src="/logo-pauline-ngoma-aigle-mark.svg"
+              />
               <span className="footer-logo-text">
                 Maître Pauline NGOMA MABALA
               </span>

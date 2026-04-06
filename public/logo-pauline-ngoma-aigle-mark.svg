@@ -1,0 +1,47 @@
+<svg width="512" height="230" viewBox="0 0 512 230" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="markTitle markDesc">
+  <title id="markTitle">Monogramme aigle Maître Pauline Ngoma Mabala</title>
+  <desc id="markDesc">Logo symbole seul avec monogramme et aigle stylisé en bleu nuit et or.</desc>
+
+  <rect width="512" height="230" rx="28" fill="#FFFCF7"/>
+  <rect x="22" y="16" width="468" height="198" rx="24" stroke="#A67F2E" stroke-width="4"/>
+
+  <g transform="translate(-58 -70) scale(1.18 0.74)">
+    <g transform="translate(0 -18)">
+      <path
+        d="M118 344
+           C154 266 201 211 257 180
+           C280 167 305 160 327 160
+           C313 180 301 203 295 226
+           C289 245 289 264 295 282
+           C274 264 252 255 228 255
+           C198 255 168 271 139 302
+           C131 311 124 326 118 344Z"
+        fill="#20324A"
+      />
+
+      <path
+        d="M280 170
+           C311 170 338 181 355 204
+           C363 213 369 225 372 237
+           C357 229 340 226 325 229
+           C330 216 334 203 334 191
+           C316 191 297 199 281 211
+           C273 217 265 225 259 235
+           C259 214 265 191 280 170Z"
+        fill="#A67F2E"
+      />
+
+      <circle cx="330" cy="207" r="7" fill="#FFFCF7"/>
+    </g>
+
+    <text x="138" y="350" fill="#0D0D0D" font-family="'Playfair Display', Georgia, serif" font-size="94" font-weight="600" letter-spacing="0.02em">
+      P
+    </text>
+    <text x="206" y="350" fill="#A67F2E" font-family="'Playfair Display', Georgia, serif" font-size="94" font-weight="600" letter-spacing="0.02em">
+      N
+    </text>
+    <text x="274" y="350" fill="#0D0D0D" font-family="'Playfair Display', Georgia, serif" font-size="94" font-weight="600" letter-spacing="0.02em">
+      M
+    </text>
+  </g>
+</svg>
