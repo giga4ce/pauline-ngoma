@@ -1,4 +1,4 @@
-export const CABINET_EMAIL = 'contact@pauline-ngoma-avocat.fr'
+export const CABINET_EMAIL = 'contact@pauline-ngoma-mabala.fr'
 
 export const CABINET_EMAIL_HREF = `mailto:${CABINET_EMAIL}`
 

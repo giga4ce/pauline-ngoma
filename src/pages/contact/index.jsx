@@ -29,10 +29,10 @@ const Contact = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Contact | Maître Pauline NGOMA-MABALA</title>
+        <title>Contact | Maître Pauline NGOMA MABALA</title>
         <meta
           property="og:title"
-          content="Contact | Maître Pauline NGOMA-MABALA"
+          content="Contact | Maître Pauline NGOMA MABALA"
         />
         <link
           rel="canonical"

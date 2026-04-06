@@ -31,7 +31,7 @@ afterEach(() => {
 
 test('renders home route', () => {
   renderAt('/')
-  expect(container.textContent).toContain('Maître Pauline NGOMA-MABALA')
+  expect(container.textContent).toContain('Maître Pauline NGOMA MABALA')
 })
 
 test('renders contact route', () => {
