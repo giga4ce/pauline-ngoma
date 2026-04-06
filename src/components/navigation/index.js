@@ -20,7 +20,7 @@ const Navigation = () => {
         <div className="navigation-container">
           <Link to="/" onClick={handleHomeBrandClick}>
             <div
-              aria-label="Maître Pauline NGOMA-MABALA - Home"
+              aria-label="Maître Pauline NGOMA MABALA - Home"
               className="navigation-brand"
             >
               <span className="navigation-logo-text section-title">
@@ -28,7 +28,7 @@ const Navigation = () => {
               </span>
               <div className="navigation-brand-details">
                 <span className="navigation-brand-name">
-                  Maître Pauline NGOMA-MABALA
+                  Maître Pauline NGOMA MABALA
                 </span>
                 <span className="navigation-brand-tagline">
                   Avocate au barreau d&apos;Aix-en-Provence
@@ -91,7 +91,7 @@ const Navigation = () => {
         <div className="navigation-overlay-header">
           <Link to="/" onClick={handleHomeBrandClick}>
             <div
-              aria-label="Maître Pauline NGOMA-MABALA - Home"
+              aria-label="Maître Pauline NGOMA MABALA - Home"
               className="navigation-brand"
             >
               <span className="navigation-logo-text section-title">

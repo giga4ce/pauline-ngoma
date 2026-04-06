@@ -11,14 +11,14 @@ const Footer = () => {
           <div className="footer-branding">
             <div className="footer-logo-group">
               <span className="footer-logo-text">
-                Maître Pauline NGOMA-MABALA
+                Maître Pauline NGOMA MABALA
               </span>
               <span className="footer-logo-tagline">
                 Cabinet d&apos;avocat au barreau d&apos;Aix-en-Provence
               </span>
             </div>
             <p className="section-content footer-description">
-              Maître Pauline NGOMA-MABALA vous accompagne avec rigueur,
+              Maître Pauline NGOMA MABALA vous accompagne avec rigueur,
               discrétion et engagement en dommage corporel, droit de la
               famille, droit des étrangers et droit pénal des victimes.
             </p>
@@ -104,7 +104,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="footer-copyright">
-              © 2024 Maître Pauline NGOMA-MABALA. All rights reserved.
+              © 2024 Maître Pauline NGOMA MABALA. All rights reserved.
             </p>
           </div>
         </div>

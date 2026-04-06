@@ -15,10 +15,10 @@ const MentionsLegales = () => {
   return (
     <div className="legal-page-container">
       <Helmet>
-        <title>Mentions légales | Maître Pauline NGOMA-MABALA</title>
+        <title>Mentions légales | Maître Pauline NGOMA MABALA</title>
         <meta
           property="og:title"
-          content="Mentions légales | Maître Pauline NGOMA-MABALA"
+          content="Mentions légales | Maître Pauline NGOMA MABALA"
         />
       </Helmet>
       <MainLayout>
@@ -34,7 +34,7 @@ const MentionsLegales = () => {
               <section className="legal-section">
                 <h2 className="section-title">Éditeur du site</h2>
                 <p className="section-content">
-                  Le présent site est édité par Maître Pauline NGOMA-MABALA,
+                  Le présent site est édité par Maître Pauline NGOMA MABALA,
                   avocate au barreau d&apos;Aix-en-Provence.
                 </p>
                 <ul className="legal-list section-content">
@@ -54,7 +54,7 @@ const MentionsLegales = () => {
                 <h2 className="section-title">Directeur de la publication</h2>
                 <p className="section-content">
                   Le directeur de la publication est Maître Pauline
-                  NGOMA-MABALA.
+                  NGOMA MABALA.
                 </p>
               </section>
 
@@ -82,7 +82,7 @@ const MentionsLegales = () => {
                 <p className="section-content">
                   Les informations publiées sur ce site sont fournies à titre
                   informatif. Elles ne constituent pas un conseil juridique
-                  personnalisé. Maître Pauline NGOMA-MABALA ne saurait être tenue responsable de
+                  personnalisé. Maître Pauline NGOMA MABALA ne saurait être tenue responsable de
                   l&apos;utilisation faite des informations diffusées.
                 </p>
               </section>

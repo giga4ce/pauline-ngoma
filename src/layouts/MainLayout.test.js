@@ -31,6 +31,6 @@ test('renders children and navigation, without footer when disabled', () => {
   })
 
   expect(container.textContent).toContain('Layout Child Content')
-  expect(container.textContent).toContain('Maître Pauline NGOMA-MABALA')
+  expect(container.textContent).toContain('Maître Pauline NGOMA MABALA')
   expect(container.textContent).not.toContain('All rights reserved')
 })

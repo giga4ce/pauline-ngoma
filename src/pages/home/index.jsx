@@ -33,11 +33,11 @@ const Home = () => {
     <Fragment>
       <Helmet>
         <title>
-          Maître Pauline NGOMA-MABALA | Avocate au barreau d&apos;Aix-en-Provence
+          Maître Pauline NGOMA MABALA | Avocate au barreau d&apos;Aix-en-Provence
         </title>
         <meta
           property="og:title"
-          content="Maître Pauline NGOMA-MABALA | Avocate au barreau d'Aix-en-Provence"
+          content="Maître Pauline NGOMA MABALA | Avocate au barreau d'Aix-en-Provence"
         />
         <link
           rel="canonical"
@@ -57,7 +57,7 @@ const Home = () => {
         <div className="hero-principal-container">
           <div className="hero-principal-content">
             <h1 className="home-hero-title hero-title">
-              Maître Pauline NGOMA-MABALA
+              Maître Pauline NGOMA MABALA
             </h1>
             <p className="hero-subtitle">
               Avocate au barreau d&apos;Aix-en-Provence – Défense et accompagnement des victimes
@@ -84,7 +84,7 @@ const Home = () => {
             <div className="presentation-media">
               <div className="presentation-image-wrapper">
                 <img
-                  alt="Portrait de Maître Pauline NGOMA-MABALA"
+                  alt="Portrait de Maître Pauline NGOMA MABALA"
                   src="https://images.pexels.com/photos/7841465/pexels-photo-7841465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
                   className="presentation-image presentation-image-home"
                 />
@@ -100,7 +100,7 @@ const Home = () => {
               </p>
               <div className="section-content">
                 <p>
-                  Maître Pauline NGOMA-MABALA intervient avec une rigueur
+                  Maître Pauline NGOMA MABALA intervient avec une rigueur
                   absolue dans les domaines du dommage corporel, du droit de la
                   famille, du droit des étrangers et du droit pénal des
                   victimes. Chaque dossier est traité avec une attention
@@ -612,7 +612,7 @@ const Home = () => {
             <div className="contact-info-block">
               <h2 className="section-title">Contactez-moi</h2>
               <p className="section-subtitle">
-                Maître Pauline NGOMA-MABALA vous répond
+                Maître Pauline NGOMA MABALA vous répond
               </p>
               <div className="contact-details">
                 <div className="contact-detail-item">

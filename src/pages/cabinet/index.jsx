@@ -10,10 +10,10 @@ const Cabinet = () => {
   return (
     <>
       <Helmet>
-        <title>Cabinet | Maître Pauline NGOMA-MABALA</title>
+        <title>Cabinet | Maître Pauline NGOMA MABALA</title>
         <meta
           property="og:title"
-          content="Cabinet | Maître Pauline NGOMA-MABALA"
+          content="Cabinet | Maître Pauline NGOMA MABALA"
         />
         <link
           rel="canonical"

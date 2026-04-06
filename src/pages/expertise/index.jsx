@@ -12,10 +12,10 @@ const Expertise = () => {
   return (
     <>
       <Helmet>
-        <title>Expertise | Maître Pauline NGOMA-MABALA</title>
+        <title>Expertise | Maître Pauline NGOMA MABALA</title>
         <meta
           property="og:title"
-          content="Expertise | Maître Pauline NGOMA-MABALA"
+          content="Expertise | Maître Pauline NGOMA MABALA"
         />
         <link
           rel="canonical"

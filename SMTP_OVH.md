@@ -4,7 +4,7 @@ Cette mise en place utilise :
 
 - un endpoint PHP dans `public/api/contact.php`
 - `PHPMailer`
-- le SMTP OVH de la boite `contact@pauline-ngoma-avocat.fr`
+- le SMTP OVH de la boite `contact@pauline-ngoma-mabala.fr`
 
 ## 1. Installer PHPMailer localement
 
@@ -31,7 +31,7 @@ Puis renseigner dans `public/api/config.php` :
 - `host` : `ssl0.ovh.net`
 - `port` : `465`
 - `secure` : `ssl`
-- `username` : `contact@pauline-ngoma-avocat.fr`
+- `username` : `contact@pauline-ngoma-mabala.fr`
 - `password` : mot de passe de la boite OVH
 
 Le fichier `public/api/config.php` est ignore par Git.
@@ -66,7 +66,7 @@ Verifier apres mise en ligne :
 
 - la soumission du formulaire depuis l'accueil
 - la soumission depuis la page contact
-- la reception sur `contact@pauline-ngoma-avocat.fr`
+- la reception sur `contact@pauline-ngoma-mabala.fr`
 
 ## Notes
 

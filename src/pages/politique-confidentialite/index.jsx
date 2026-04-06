@@ -14,11 +14,11 @@ const PolitiqueConfidentialite = () => {
     <div className="legal-page-container">
       <Helmet>
         <title>
-          Politique de confidentialité | Maître Pauline NGOMA-MABALA
+          Politique de confidentialité | Maître Pauline NGOMA MABALA
         </title>
         <meta
           property="og:title"
-          content="Politique de confidentialité | Maître Pauline NGOMA-MABALA"
+          content="Politique de confidentialité | Maître Pauline NGOMA MABALA"
         />
       </Helmet>
       <MainLayout>
@@ -35,7 +35,7 @@ const PolitiqueConfidentialite = () => {
                 <h2 className="section-title">Responsable du traitement</h2>
                 <p className="section-content">
                   Le responsable du traitement des données personnelles est
-                  Maître Pauline NGOMA-MABALA, avocate au barreau
+                  Maître Pauline NGOMA MABALA, avocate au barreau
                   d&apos;Aix-en-Provence, domiciliée {CABINET_ADDRESS_LINES[0]},
                   {` ${CABINET_ADDRESS_LINES[1]}`}.
                 </p>
@@ -64,7 +64,7 @@ const PolitiqueConfidentialite = () => {
                   d&apos;information, organiser un rendez-vous et assurer le
                   suivi des échanges. Le traitement repose sur votre
                   consentement et sur l&apos;intérêt légitime de Maître Pauline
-                  NGOMA-MABALA à
+                  NGOMA MABALA à
                   traiter les sollicitations reçues.
                 </p>
               </section>
@@ -82,7 +82,7 @@ const PolitiqueConfidentialite = () => {
                 <h2 className="section-title">Destinataires</h2>
                 <p className="section-content">
                   Les données sont destinées exclusivement à Maître Pauline
-                  NGOMA-MABALA et, le cas échéant, à ses prestataires techniques
+                  NGOMA MABALA et, le cas échéant, à ses prestataires techniques
                   strictement nécessaires au
                   fonctionnement du site.
                 </p>

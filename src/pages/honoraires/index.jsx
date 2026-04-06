@@ -9,10 +9,10 @@ const Honoraires = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Honoraires | Maître Pauline NGOMA-MABALA</title>
+        <title>Honoraires | Maître Pauline NGOMA MABALA</title>
         <meta
           property="og:title"
-          content="Honoraires | Maître Pauline NGOMA-MABALA"
+          content="Honoraires | Maître Pauline NGOMA MABALA"
         />
         <link
           rel="canonical"

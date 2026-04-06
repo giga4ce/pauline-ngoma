@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <div className="not-found-page">
       <Helmet>
-        <title>Page introuvable | Maître Pauline NGOMA-MABALA</title>
+        <title>Page introuvable | Maître Pauline NGOMA MABALA</title>
       </Helmet>
       <h3>OOPS! PAGE NOT FOUND</h3>
       <div className="not-found-code-wrap">
