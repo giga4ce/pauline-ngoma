@@ -27,8 +27,8 @@ const Expertise = () => {
         <section className="expertise-hero expertise-page-hero">
           <div className="hero-media-wrapper">
             <img
-              alt="Bureau d'avocat luxueux"
-              src="https://images.pexels.com/photos/7841844/pexels-photo-7841844.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+              alt="Portrait de Maître Pauline NGOMA MABALA"
+              src="/images/pauline-ngoma-hero-expertise.png"
               className="hero-bg-image"
             />
             <div className="expertise-hero-overlay"></div>

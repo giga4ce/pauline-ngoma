@@ -20,7 +20,12 @@ const Honoraires = () => {
         />
       </Helmet>
       <MainLayout>
-        <section className="honoraires-hero">
+        <section
+          className="honoraires-hero honoraires-page-hero"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pauline-ngoma-honoraires-banner.webp)`,
+          }}
+        >
           <div className="honoraires-hero-overlay"></div>
           <div className="hero-content">
             <h1 className="hero-title">Honoraires</h1>
