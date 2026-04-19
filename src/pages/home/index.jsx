@@ -48,8 +48,8 @@ const Home = () => {
       <section className="hero-principal">
         <div className="hero-principal-background">
           <img
-            alt="Cabinet d'avocat prestigieux"
-            src="https://images.pexels.com/photos/7841462/pexels-photo-7841462.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+            alt="Portrait de Maître Pauline NGOMA MABALA"
+            src="/images/pauline-ngoma-hero.png"
             className="hero-principal-image"
           />
           <div className="hero-principal-scrim"></div>
@@ -85,7 +85,7 @@ const Home = () => {
               <div className="presentation-image-wrapper">
                 <img
                   alt="Portrait de Maître Pauline NGOMA MABALA"
-                  src="https://images.pexels.com/photos/7841465/pexels-photo-7841465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  src="/images/pauline-ngoma-expertise.png"
                   className="presentation-image presentation-image-home"
                 />
                 <div className="presentation-image-accent"></div>

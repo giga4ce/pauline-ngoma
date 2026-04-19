@@ -20,7 +20,7 @@ const Honoraires = () => {
         />
       </Helmet>
       <MainLayout>
-        <section className="honoraires-hero">
+        <section className="honoraires-hero honoraires-page-hero">
           <div className="honoraires-hero-overlay"></div>
           <div className="hero-content">
             <h1 className="hero-title">Honoraires</h1>

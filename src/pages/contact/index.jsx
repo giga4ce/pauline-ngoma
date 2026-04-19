@@ -40,7 +40,7 @@ const Contact = () => {
         />
       </Helmet>
       <MainLayout>
-        <section className="honoraires-hero">
+        <section className="honoraires-hero contact-page-hero">
           <div className="honoraires-hero-overlay"></div>
           <div className="hero-content">
             <h1 className="hero-title">Contact</h1>
