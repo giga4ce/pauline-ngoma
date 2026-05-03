@@ -49,7 +49,7 @@ const Home = () => {
         <div className="hero-principal-background">
           <img
             alt="Portrait de Maître Pauline NGOMA MABALA"
-            src="/images/pauline-ngoma-hero.png"
+            src="/images/pauline-ngoma-home-header.jpeg"
             className="hero-principal-image"
           />
           <div className="hero-principal-scrim"></div>
