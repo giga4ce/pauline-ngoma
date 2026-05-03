@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/expertise</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/cabinet</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/honoraires</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/contact</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/mentions-legales</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.pauline-ngoma-mabala.fr/politique-de-confidentialite</loc>
+    <priority>0.3</priority>
+  </url>
+</urlset>
