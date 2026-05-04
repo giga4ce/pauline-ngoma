@@ -52,7 +52,7 @@ const ValuesSection = ({ emphasisClasses = [] }) => {
           <div className="values-image-wrapper">
             <img
               alt="Maître Pauline NGOMA MABALA tenant un code juridique"
-              src="/images/pauline-ngoma-justice.png"
+              src="/images/pauline-ngoma-justice.jpeg"
               className="values-img"
             />
           </div>

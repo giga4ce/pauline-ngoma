@@ -25,8 +25,8 @@ const Cabinet = () => {
         <section className="cabinet-expertise-hero expertise-hero">
           <div className="hero-media-wrapper">
             <img
-              alt="Bandeau du cabinet de Maître Pauline NGOMA MABALA"
-              src="/images/pauline-ngoma-cabinet-banner.webp"
+              alt="Espace d'accueil du cabinet de Maître Pauline NGOMA MABALA"
+              src="/images/pauline-ngoma-expertise-hero.jpeg"
               className="hero-bg-image"
             />
             <div className="expertise-hero-overlay"></div>
@@ -165,8 +165,8 @@ const Cabinet = () => {
               <div className="approach-image-side">
                 <div className="image-frame">
                   <img
-                    alt="Portrait de Maître Pauline NGOMA MABALA dans son approche d'accompagnement"
-                    src="/images/pauline-ngoma-approach.webp"
+                    alt="Espace de consultation du cabinet de Maître Pauline NGOMA MABALA"
+                    src="/images/pauline-ngoma-approach.jpeg"
                     className="approach-img"
                   />
                   <div className="frame-accent"></div>

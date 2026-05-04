@@ -84,8 +84,8 @@ const Home = () => {
             <div className="presentation-media">
               <div className="presentation-image-wrapper">
                 <img
-                  alt="Portrait de Maître Pauline NGOMA MABALA"
-                  src="/images/pauline-ngoma-expertise.png"
+                  alt="Cabinet de Maître Pauline NGOMA MABALA"
+                  src="/images/pauline-ngoma-expertise.jpeg"
                   className="presentation-image presentation-image-home"
                 />
                 <div className="presentation-image-accent"></div>

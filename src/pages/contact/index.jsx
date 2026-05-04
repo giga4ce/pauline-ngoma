@@ -43,7 +43,7 @@ const Contact = () => {
         <section
           className="honoraires-hero contact-page-hero"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pauline-ngoma-justice.png)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pauline-ngoma-expertise-hero.jpeg)`,
           }}
         >
           <div className="honoraires-hero-overlay"></div>
