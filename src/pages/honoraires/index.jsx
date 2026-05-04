@@ -23,7 +23,7 @@ const Honoraires = () => {
         <section
           className="honoraires-hero honoraires-page-hero"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pauline-ngoma-honoraires-banner.webp)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pauline-ngoma-expertise-hero.jpeg)`,
           }}
         >
           <div className="honoraires-hero-overlay"></div>

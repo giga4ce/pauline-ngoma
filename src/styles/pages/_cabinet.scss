@@ -665,6 +665,8 @@
 }
  
 .image-frame {
+  margin: 0 auto;
+  max-width: 440px;
   padding: var(--spacing-lg);
   position: relative;
 }
@@ -693,8 +695,12 @@
  
 .approach-img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 2 / 3;
+  height: 100%;
   z-index: 2;
+  display: block;
+  object-fit: cover;
+  object-position: center;
   position: relative;
   box-shadow: var(--shadow-level-3);
   border-radius: var(--border-radius-md);
