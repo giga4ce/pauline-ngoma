@@ -42,15 +42,12 @@
   background: transparent;
 }
  
-.navigation-logo-text {
-  border: 1px solid var(--color-accent);
-  display: inline-flex;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  font-size: var(--font-size-2xl);
-  align-items: center;
-  line-height: 1;
-  letter-spacing: 0.1em;
-  justify-content: center;
+.navigation-logo {
+  width: 112px;
+  height: 50px;
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
  
 .navigation-brand-details {
@@ -67,10 +64,6 @@
 }
  
 
- 
-.navigation-logo-accent {
-  color: var(--color-accent);
-}
  
 .navigation-brand-name {
   color: var(--color-on-surface);
@@ -242,5 +235,10 @@
 .navigation-mobile-link.active {
   color: var(--color-accent);
   font-weight: var(--font-weight-heading);
+}
+
+.navigation-logo-mobile {
+  width: 128px;
+  height: 58px;
 }
  

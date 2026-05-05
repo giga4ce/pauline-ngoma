@@ -54,7 +54,16 @@
 .footer-logo-group {
   gap: var(--spacing-xs);
   display: flex;
+  align-items: center;
   flex-direction: column;
+}
+
+.footer-logo {
+  width: 156px;
+  height: 70px;
+  display: block;
+  object-fit: contain;
+  margin-bottom: var(--spacing-xs);
 }
  
 .footer-description {
