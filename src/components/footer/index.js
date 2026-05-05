@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import Script from 'dangerous-html/react'
 
+const logoSrc = `${process.env.PUBLIC_URL}/logo-pauline-ngoma-aigle-mark.svg`
+
 const Footer = () => {
   return (
     <>
@@ -10,6 +12,12 @@ const Footer = () => {
         <div className="footer-container">
           <div className="footer-branding">
             <div className="footer-logo-group">
+              <img
+                src={logoSrc}
+                alt=""
+                className="footer-logo"
+                aria-hidden="true"
+              />
               <span className="footer-logo-text">
                 Maître Pauline NGOMA MABALA
               </span>

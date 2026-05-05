@@ -9,6 +9,8 @@ import {
   CABINET_EMAIL_HREF,
 } from '@/config/cabinet'
 
+const logoSrc = `${process.env.PUBLIC_URL}/logo-pauline-ngoma-aigle-mark.svg`
+
 const Navigation = () => {
   const handleHomeBrandClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -23,9 +25,12 @@ const Navigation = () => {
               aria-label="Maître Pauline NGOMA MABALA - Home"
               className="navigation-brand"
             >
-              <span className="navigation-logo-text section-title">
-                M<span className="navigation-logo-accent">É</span>P
-              </span>
+              <img
+                src={logoSrc}
+                alt=""
+                className="navigation-logo"
+                aria-hidden="true"
+              />
               <div className="navigation-brand-details">
                 <span className="navigation-brand-name">
                   Maître Pauline NGOMA MABALA
@@ -94,9 +99,12 @@ const Navigation = () => {
               aria-label="Maître Pauline NGOMA MABALA - Home"
               className="navigation-brand"
             >
-              <span className="navigation-logo-text section-title">
-                M<span className="navigation-logo-accent">É</span>P
-              </span>
+              <img
+                src={logoSrc}
+                alt=""
+                className="navigation-logo navigation-logo-mobile"
+                aria-hidden="true"
+              />
             </div>
           </Link>
           <button
