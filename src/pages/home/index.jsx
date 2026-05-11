@@ -65,7 +65,7 @@ const Home = () => {
             <p className="hero-description section-content">
               Dédiée à la protection de vos droits avec excellence et humanité.
               Spécialisée dans l&apos;accompagnement des victimes, Maître
-              Prestige met son expertise au service de votre sérénité et de
+              Maître Pauline met son expertise au service de votre sérénité et de
               votre justice.
             </p>
             <div className="hero-principal-actions">
