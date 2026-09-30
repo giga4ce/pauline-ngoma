@@ -4,5 +4,6 @@ build/
 .env.*
 !.env.example
 .DS_Store
+.idea/
 public/api/config.php
 public/api/vendor/
