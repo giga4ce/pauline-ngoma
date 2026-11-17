@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Script from 'dangerous-html/react'
 import { Helmet } from 'react-helmet'
 
+import GoogleTestimonialsSection from '@/components/google-testimonials/GoogleTestimonialsSection'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 import {
@@ -13,11 +14,19 @@ import {
   CABINET_PHONE,
   CABINET_PHONE_HREF,
 } from '@/config/cabinet'
+import {
+  FieldError,
+  FormPrivacyNotice,
+  RequiredFieldsNote,
+  RequiredMark,
+} from '@/components/forms'
 import { useContactForm } from '@/hooks/useContactForm'
 
 const Home = () => {
   const {
     feedback,
+    fieldErrors,
+    getFieldProps,
     handleSubmit,
     isError,
     isSubmitting,
@@ -64,7 +73,7 @@ const Home = () => {
             </p>
             <p className="hero-description section-content">
               Dédiée à la protection de vos droits avec excellence et humanité.
-              Spécialisée dans l&apos;accompagnement des victimes, Maître
+              Engagée dans l&apos;accompagnement des victimes, Maître
               Pauline NGOMA MABALA met son expertise au service de votre sérénité et de
               votre justice.
             </p>
@@ -140,7 +149,7 @@ const Home = () => {
           <header className="domaines-header">
             <h2 className="section-title">Domaines d&apos;intervention</h2>
             <p className="section-subtitle">
-              Une défense spécialisée pour chaque situation
+              Une défense adaptée à chaque situation
             </p>
           </header>
           <div className="domaines-grid">
@@ -362,199 +371,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="temoignages-selectionnes">
-        <div className="temoignages-container">
-          <div className="temoignages-card">
-            <div className="temoignages-slider">
-              <section className="testimonials-luxury">
-                <div className="testimonials-container">
-                  <div className="testimonials-header">
-                    <h2 className="section-title">Témoignages</h2>
-                    <div className="header-line"></div>
-                  </div>
-                  <div className="testimonials-slider-wrapper">
-                    <div id="testimonials-track" className="testimonials-track">
-                      <div className="testimonial-card">
-                        <div className="quote-icon-box">
-                          <svg
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M9 5a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C7.984 16.473 9 15.203 9 13v-1H6a2 2 0 0 1-1.995-1.85L4 10V7a2 2 0 0 1 2-2zm9 0a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C16.984 16.473 18 15.203 18 13v-1h-3a2 2 0 0 1-1.995-1.85L13 10V7a2 2 0 0 1 2-2z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </div>
-                        <p className="testimonial-text section-content">
-                          &quot;Un accompagnement d&apos;une rare humanité et
-                          d&apos;un professionnalisme exemplaire. Maître S. a su
-                          défendre mes intérêts avec une détermination sans
-                          faille lors de mon divorce.&quot;
-                        </p>
-                        <div className="testimonial-author">
-                          <span className="author-name">Mme Catherine D.</span>
-                          <span className="author-label">
-                            Droit de la famille
-                          </span>
-                        </div>
-                      </div>
-                      <div className="testimonial-card">
-                        <div className="quote-icon-box">
-                          <svg
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M9 5a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C7.984 16.473 9 15.203 9 13v-1H6a2 2 0 0 1-1.995-1.85L4 10V7a2 2 0 0 1 2-2zm9 0a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C16.984 16.473 18 15.203 18 13v-1h-3a2 2 0 0 1-1.995-1.85L13 10V7a2 2 0 0 1 2-2z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </div>
-                        <p className="testimonial-text section-content">
-                          &quot;Grâce à son expertise en dommage corporel,
-                          j&apos;ai pu obtenir une indemnisation juste après mon
-                          accident. Une écoute attentive qui fait toute la
-                          différence dans les moments difficiles.&quot;
-                        </p>
-                        <div className="testimonial-author">
-                          <span className="author-name">M. Jean-Pierre L.</span>
-                          <span className="author-label">Dommage Corporel</span>
-                        </div>
-                      </div>
-                      <div className="testimonial-card">
-                        <div className="quote-icon-box">
-                          <svg
-                            width="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M9 5a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C7.984 16.473 9 15.203 9 13v-1H6a2 2 0 0 1-1.995-1.85L4 10V7a2 2 0 0 1 2-2zm9 0a2 2 0 0 1 2 2v6c0 3.13-1.65 5.193-4.757 5.97a1 1 0 1 1-.486-1.94C16.984 16.473 18 15.203 18 13v-1h-3a2 2 0 0 1-1.995-1.85L13 10V7a2 2 0 0 1 2-2z"
-                              fill="currentColor"
-                            ></path>
-                          </svg>
-                        </div>
-                        <p className="testimonial-text section-content">
-                          &quot;Une réactivité impressionnante et des conseils
-                          stratégiques précieux. Je recommande vivement ce
-                          cabinet pour toute affaire pénale complexe.&quot;
-                        </p>
-                        <div className="testimonial-author">
-                          <span className="author-name">M. Thomas B.</span>
-                          <span className="author-label">Droit Pénal</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="testimonials-nav" className="testimonials-nav">
-                    <button
-                      aria-label="Slide 1"
-                      className="active testimonial-dot"
-                    ></button>
-                    <button
-                      aria-label="Slide 2"
-                      className="testimonial-dot"
-                    ></button>
-                    <button
-                      aria-label="Slide 3"
-                      className="testimonial-dot"
-                    ></button>
-                  </div>
-                </div>
-              </section>
-              <Script
-                html={`<script>
-(function(){
-  ;(function () {
-    const track = document.getElementById("testimonials-track")
-    const dots = document.querySelectorAll(".testimonial-dot")
-    const wrapper = document.querySelector(".testimonials-slider-wrapper")
-    const slides = track ? Array.from(track.children) : []
-
-    if (!track || !wrapper || !dots.length || !slides.length) {
-      return
-    }
-
-    let currentIndex = 0
-    const slideCount = dots.length
-    let autoScrollInterval
-
-    function getSlideWidth() {
-      return wrapper.getBoundingClientRect().width
-    }
-
-    function syncSliderLayout() {
-      const slideWidth = getSlideWidth()
-
-      slides.forEach((slide) => {
-        slide.style.width = \`\${slideWidth}px\`
-        slide.style.flex = \`0 0 \${slideWidth}px\`
-      })
-
-      track.style.width = \`\${slideWidth * slideCount}px\`
-      track.style.transform = \`translateX(-\${currentIndex * slideWidth}px)\`
-    }
-
-    function updateSlider(index) {
-      currentIndex = index
-      const offset = index * getSlideWidth()
-      track.style.transform = \`translateX(-\${offset}px)\`
-
-      dots.forEach((dot, i) => {
-        if (i === index) {
-          dot.classList.add("active")
-        } else {
-          dot.classList.remove("active")
-        }
-      })
-    }
-
-    function nextSlide() {
-      let nextIndex = (currentIndex + 1) % slideCount
-      updateSlider(nextIndex)
-    }
-
-    function startAutoScroll() {
-      stopAutoScroll()
-      autoScrollInterval = setInterval(nextSlide, 5000)
-    }
-
-    function stopAutoScroll() {
-      if (autoScrollInterval) {
-        clearInterval(autoScrollInterval)
-      }
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener("click", () => {
-        updateSlider(index)
-        startAutoScroll() // Reset timer on manual click
-      })
-    })
-
-    // Pause on hover
-    wrapper.addEventListener("mouseenter", stopAutoScroll)
-    wrapper.addEventListener("mouseleave", startAutoScroll)
-    window.addEventListener("resize", syncSliderLayout)
-
-    // Initialize
-    syncSliderLayout()
-    updateSlider(0)
-    startAutoScroll()
-  })()
-})()
-</script>`}
-              ></Script>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GoogleTestimonialsSection />
       <section className="deroule-accompagnement">
         <div className="deroule-container">
           <header className="deroule-header">
@@ -692,12 +509,15 @@ const Home = () => {
               <form
                 data-form-id="8876550f-271e-45f2-bca8-5d5bb3f1cc5c"
                 className="contact-form"
+                noValidate
                 onChange={resetFeedback}
                 onSubmit={handleSubmit}
               >
+                <RequiredFieldsNote />
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
                     Nom complet
+                    <RequiredMark />
                   </label>
                   <input
                     type="text"
@@ -706,13 +526,16 @@ const Home = () => {
                     required
                     placeholder="Votre nom"
                     data-form-field-id="name"
+                    {...getFieldProps('nom', 'home-name-error')}
                     className="form-input"
                   />
+                  <FieldError id="home-name-error" message={fieldErrors.nom} />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="email" className="form-label">
                       Email
+                      <RequiredMark />
                     </label>
                     <input
                       type="email"
@@ -721,26 +544,34 @@ const Home = () => {
                       required
                       placeholder="votre@email.com"
                       data-form-field-id="email"
+                      {...getFieldProps('email', 'home-email-error')}
                       className="form-input"
                     />
+                    <FieldError id="home-email-error" message={fieldErrors.email} />
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">
                       Téléphone
+                      <RequiredMark />
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="telephone"
+                      autoComplete="tel"
+                      required
                       placeholder="06 00 00 00 00"
                       data-form-field-id="phone"
+                      {...getFieldProps('telephone', 'home-phone-error')}
                       className="form-input"
                     />
+                    <FieldError id="home-phone-error" message={fieldErrors.telephone} />
                   </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">
                     Message
+                    <RequiredMark />
                   </label>
                   <textarea
                     id="message"
@@ -748,8 +579,10 @@ const Home = () => {
                     required
                     placeholder="Comment puis-je vous aider ?"
                     data-form-field-id="message"
+                    {...getFieldProps('message', 'home-message-error')}
                     className="form-textarea"
                   ></textarea>
+                  <FieldError id="home-message-error" message={fieldErrors.message} />
                 </div>
                 <input
                   type="text"
@@ -774,6 +607,7 @@ const Home = () => {
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Prendre rendez-vous'}
                 </button>
+                <FormPrivacyNotice />
                 {feedback ? (
                   <div
                     className={`form-flash ${
@@ -817,16 +651,6 @@ const Home = () => {
     el.style.transform = "translateY(20px)"
     el.style.transition = "all 0.6s ease-out"
     revealObserver.observe(el)
-  })
-
-  // Simple testimonial "slider" dots interaction
-  const dots = document.querySelectorAll(".temoignage-dot")
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      dots.forEach((d) => d.classList.remove("active"))
-      dot.classList.add("active")
-      // In a real implementation, this would trigger the slider movement
-    })
   })
 
 })()

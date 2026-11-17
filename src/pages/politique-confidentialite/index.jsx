@@ -36,8 +36,8 @@ const PolitiqueConfidentialite = () => {
                 <p className="section-content">
                   Le responsable du traitement des données personnelles est
                   Maître Pauline NGOMA MABALA, avocate au barreau
-                  d&apos;Aix-en-Provence, domiciliée {CABINET_ADDRESS_LINES[0]},
-                  {` ${CABINET_ADDRESS_LINES[1]}`}.
+                  d&apos;Aix-en-Provence, domiciliée{' '}
+                  {CABINET_ADDRESS_LINES.join(', ')}.
                 </p>
               </section>
 

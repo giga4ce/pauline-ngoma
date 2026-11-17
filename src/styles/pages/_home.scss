@@ -257,74 +257,120 @@
   font-weight: var(--font-weight-heading);
 }
  
-.temoignages-selectionnes {
+.google-reviews {
   padding: var(--spacing-3xl) 0;
   background: var(--color-surface);
 }
- 
-.temoignages-container {
+
+.google-reviews-container {
+  width: 100%;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
-  max-width: 800px;
 }
- 
-.temoignages-card {
-  padding: var(--spacing-3xl);
-  position: relative;
+
+.google-reviews-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.google-reviews-header .header-line {
+  width: 60px;
+  height: 2px;
+  margin-top: var(--spacing-sm);
+  background-color: var(--color-accent);
+}
+
+.google-reviews-summary {
+  margin-top: var(--spacing-xl);
+}
+
+.google-reviews-summary p {
+  margin: var(--spacing-xs) 0 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+}
+
+.google-reviews-stars {
+  color: var(--color-accent);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.google-reviews-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.google-reviews-place-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.google-testimonials-grid {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.google-testimonial-card {
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
   background: var(--color-surface-elevated);
   box-shadow: var(--shadow-level-1);
-  text-align: center;
-  border-radius: var(--border-radius-lg);
 }
 
-.temoignages-card .testimonials-luxury {
-  padding: 0;
+.google-testimonial-card blockquote {
+  margin: var(--spacing-lg) 0;
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  line-height: 1.8;
 }
 
-.temoignages-card .testimonials-container {
-  padding: 0;
-}
-
-.temoignages-card .testimonials-slider-wrapper {
-  max-width: 100%;
-}
- 
-.temoignages-quote-icon {
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-lg);
-}
- 
-
- 
-.temoignages-nav {
-  gap: var(--spacing-sm);
+.google-testimonial-card footer {
   display: flex;
-  margin-top: var(--spacing-2xl);
-  justify-content: center;
+  gap: var(--spacing-xs);
+  color: var(--color-primary);
+  flex-direction: column;
 }
- 
 
- 
-.temoignage-dot {
-  width: 8px;
-  cursor: pointer;
-  height: 8px;
-  background: var(--color-outline);
-  transition: background 0.3s ease;
-  border-radius: 50%;
+.google-testimonial-card footer span {
+  color: var(--color-on-surface-secondary);
+  font-size: var(--font-size-sm);
 }
- 
 
- 
-.temoignage-author {
-  color: var(--color-accent);
-  display: block;
-  font-family: var(--font-family-body);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+@media(max-width: 767px) {
+  .google-reviews-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .google-reviews-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
- 
+
+@media(prefers-reduced-motion: reduce) {
+  .google-reviews *,
+  .google-reviews *::before,
+  .google-reviews *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
 .deroule-accompagnement {
   padding: var(--spacing-3xl) 0;
   background: var(--color-surface-elevated);
@@ -545,29 +591,6 @@
  
 .valeur-item  .section-content {
   opacity: 0.8;
-}
- 
-.temoignage-item  .section-content {
-  font-size: var(--font-size-xl);
-  font-style: italic;
-  line-height: 1.8;
-  margin-bottom: var(--spacing-xl);
-}
- 
-.temoignage-dot.active {
-  width: 24px;
-  background: var(--color-accent);
-  border-radius: 4px;
-}
-
-@media(max-width: 767px) {
-  .temoignages-container {
-    padding: 0 var(--spacing-md);
-  }
-
-  .temoignages-card {
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
 }
  
 .form-row  .form-group {

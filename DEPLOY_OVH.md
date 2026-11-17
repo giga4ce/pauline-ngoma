@@ -62,7 +62,39 @@ Avec ton client FTP :
 Le fichier `.htaccess` est genere avec le build car il est place dans `public/`.
 Il est necessaire pour que les routes React comme `/contact`, `/cabinet` ou `/honoraires` fonctionnent correctement sur OVH.
 
-## 5. SSL et HTTPS
+## 5. Configurer Google Places API
+
+Prerequis Google Cloud :
+
+1. activer `Places API (New)`
+2. creer une cle API reservee au serveur
+3. restreindre cette cle a `Places API (New)`
+4. si une restriction par adresse IP est utilisee, autoriser uniquement l'adresse IP sortante de l'hebergement OVH
+
+Dans `www/api/`, copier `config.example.php` vers `config.php`, puis renseigner la section :
+
+```php
+'google_places' => [
+    'api_key' => 'CHANGE_ME',
+    'place_id' => 'ChIJPVYDeN-NyRIRZYHZKHFWd08',
+    'timeout_seconds' => 3,
+],
+```
+
+Remplacer `CHANGE_ME` directement sur le serveur. Ne jamais commiter ni integrer cette cle dans une variable `REACT_APP_*` : ces variables sont publiques dans le bundle frontend.
+
+Le fichier `public/api/config.php` est ignore par Git et bloque par `public/api/.htaccess`. L'endpoint `/api/google-place.php` appelle Google directement, sans cache persistant. En cas d'indisponibilite, la homepage masque les donnees Google dynamiques.
+
+Verifier apres deploiement :
+
+```bash
+curl --fail-with-body --silent --show-error \
+  https://www.pauline-ngoma-mabala.fr/api/google-place.php
+```
+
+La reponse ne doit contenir que `rating`, `userRatingCount`, `placeUrl`, `reviewsUrl` et `writeReviewUrl`. Elle ne doit jamais contenir la cle API.
+
+## 6. SSL et HTTPS
 
 Si le certificat n'est pas encore actif :
 
@@ -76,7 +108,7 @@ Ensuite, verifier :
 - `https://pauline-ngoma-mabala.fr`
 - `https://www.pauline-ngoma-mabala.fr`
 
-## 6. Verifications apres mise en ligne
+## 7. Verifications apres mise en ligne
 
 Verifier au minimum :
 
@@ -89,17 +121,46 @@ Verifier au minimum :
 
 Si une URL interne affiche une erreur 404, le fichier `.htaccess` n'a probablement pas ete envoye dans `www/`.
 
-## 7. Point d'attention sur le formulaire de contact
+## 8. Formulaire de contact
 
-Le formulaire n'envoie pas aujourd'hui vers OVH Mail. Il utilise `formsubmit.co`.
+Les deux formulaires (accueil et page Contact) envoient les demandes a l'endpoint PHP `/api/contact.php`, qui les transmet par e-mail via le SMTP OVH de la boite `contact@pauline-ngoma-mabala.fr` (PHPMailer). Aucun service tiers n'intervient et aucune demande n'est stockee en base de donnees.
 
-Configuration actuelle :
+Fonctionnement :
 
-- fichier : `src/config/contact.js`
-- valeur par defaut : `https://formsubmit.co/ajax/<email>`
-- email cible dans le code : `harouguindja@gmail.com`
+- endpoint configure dans `src/config/contact.js` : `/api/contact.php` par defaut, modifiable avec `REACT_APP_CONTACT_FORM_ENDPOINT` avant le build
+- champs obligatoires : nom, e-mail, telephone et message
+- le telephone est valide cote navigateur et cote serveur (8 a 15 chiffres ; espaces, points, tirets, parentheses et `+` initial acceptes)
+- si un champ manque ou est invalide, le serveur repond `422` avec un message par champ, affiche sous le champ concerne
 
-Si tu veux que les messages arrivent sur ta boite OVH, il faudra remplacer cette adresse par ta nouvelle adresse e-mail ou definir `REACT_APP_CONTACT_FORM_ENDPOINT` avant le build.
+Avant le build, installer PHPMailer (voir `SMTP_OVH.md`) :
+
+```bash
+cd public/api
+composer install --no-dev
+cd ../..
+```
+
+Le build doit contenir `build/api/contact.php`, `build/api/vendor/` et `build/api/.htaccess`.
+
+Sur le serveur, `www/api/config.php` doit exister et contenir :
+
+- la section `smtp` : `ssl0.ovh.net`, port `465`, `ssl`, identifiant `contact@pauline-ngoma-mabala.fr` et mot de passe de la boite OVH
+- la section `message` : expediteur et destinataire des demandes
+- la section `google_places` (voir section 5)
+
+Ce fichier est ignore par Git et bloque en acces web par `public/api/.htaccess`. Ne jamais commiter le mot de passe SMTP.
+
+Verifier apres deploiement, sans envoyer d'e-mail (requete volontairement incomplete) :
+
+```bash
+curl --silent --show-error \
+  --data "nom=Test&email=test@exemple.fr&message=Verification" \
+  https://www.pauline-ngoma-mabala.fr/api/contact.php
+```
+
+La reponse attendue est une erreur `422` contenant `errors.telephone` : elle confirme que `vendor/` et `config.php` sont en place et que la validation serveur fonctionne. Une reponse `500` indique que `vendor/` ou `config.php` manque.
+
+Ce test ne verifie pas les identifiants SMTP. Envoyer ensuite un vrai message depuis chaque formulaire (accueil et page Contact) et verifier sa reception sur `contact@pauline-ngoma-mabala.fr`.
 
 ## Sources OVH consultees
 

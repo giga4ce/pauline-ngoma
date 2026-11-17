@@ -62,21 +62,35 @@ if ($honeypot !== '') {
     exit;
 }
 
-if ($name === '' || $email === '' || $message === '') {
-    http_response_code(422);
-    echo json_encode([
-        'success' => false,
-        'message' => 'Missing required fields.',
-    ]);
-    exit;
+$fieldErrors = [];
+
+if ($name === '') {
+    $fieldErrors['nom'] = 'Veuillez indiquer votre nom.';
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ($email === '') {
+    $fieldErrors['email'] = 'Veuillez indiquer votre adresse e-mail.';
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $fieldErrors['email'] = 'Veuillez saisir une adresse e-mail valide (par exemple : nom@exemple.fr).';
+}
+
+if ($phone === '') {
+    $fieldErrors['telephone'] = 'Veuillez indiquer votre numéro de téléphone afin que le cabinet puisse vous rappeler.';
+} elseif (!isValidPhoneNumber($phone)) {
+    $fieldErrors['telephone'] = 'Veuillez saisir un numéro de téléphone valide (par exemple : 06 12 34 56 78 ou +33 6 12 34 56 78).';
+}
+
+if ($message === '') {
+    $fieldErrors['message'] = 'Veuillez écrire votre message.';
+}
+
+if ($fieldErrors !== []) {
     http_response_code(422);
     echo json_encode([
         'success' => false,
-        'message' => 'Invalid sender email.',
-    ]);
+        'message' => 'Missing or invalid required fields.',
+        'errors' => $fieldErrors,
+    ], JSON_UNESCAPED_UNICODE);
     exit;
 }
 
@@ -181,4 +195,20 @@ try {
 
     http_response_code(500);
     echo json_encode($response);
+}
+
+/**
+ * Same rule as the front-end (src/hooks/useContactForm.js):
+ * digits, spaces, dots, dashes, parentheses and an optional leading "+",
+ * with 8 to 15 digits in total.
+ */
+function isValidPhoneNumber(string $phone): bool
+{
+    if (preg_match('/^\+?[0-9\s.\-()]+$/', $phone) !== 1) {
+        return false;
+    }
+
+    $digitCount = strlen((string) preg_replace('/\D/', '', $phone));
+
+    return $digitCount >= 8 && $digitCount <= 15;
 }

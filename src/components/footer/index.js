@@ -112,7 +112,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="footer-copyright">
-              © 2024 Maître Pauline NGOMA MABALA. All rights reserved.
+              © 2026 Maître Pauline NGOMA MABALA. All rights reserved.
             </p>
           </div>
         </div>

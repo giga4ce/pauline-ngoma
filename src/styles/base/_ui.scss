@@ -146,3 +146,62 @@
   text-decoration: underline;
 }
  
+
+/* Contact forms: required markers, inline errors and privacy notice. */
+.form-required-mark {
+  color: #9a1c13;
+  font-weight: 700;
+}
+
+.form-required-note {
+  color: var(--color-on-surface-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.form-field-error {
+  color: #9a1c13;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+  line-height: 1.4;
+  font-weight: var(--font-weight-medium);
+}
+
+form .form-input[aria-invalid='true'],
+form .form-textarea[aria-invalid='true'],
+form .contact-form-input[aria-invalid='true'] {
+  border-color: #b42318;
+  box-shadow: 0 0 0 1px #b42318;
+}
+
+/* Keep a focused field visible below the sticky navigation bar. */
+form .form-input,
+form .form-textarea,
+form .contact-form-input {
+  scroll-margin-top: 8rem;
+}
+
+form .form-input:focus-visible,
+form .form-textarea:focus-visible,
+form .contact-form-input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.form-privacy-notice {
+  color: var(--color-on-surface-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin-top: var(--spacing-md);
+}
+
+.form-privacy-notice a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-privacy-notice a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
