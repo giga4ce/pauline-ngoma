@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { GOOGLE_TESTIMONIALS } from '@/data/googleTestimonials'
+import {
+  GOOGLE_REVIEWS_SUMMARY,
+  GOOGLE_REVIEWS_URL,
+  GOOGLE_TESTIMONIALS,
+} from '@/data/googleTestimonials'
 import { useGooglePlace } from '@/hooks/useGooglePlace'
 
 const ExternalLink = ({ children, className, href }) => {
@@ -30,27 +34,81 @@ const isValidTestimonial = (testimonial) =>
   testimonial.rating >= 1 &&
   testimonial.rating <= 5
 
-const RatingStars = ({ rating }) => (
+const RatingStars = ({ id, rating }) => (
   <div className="google-reviews-stars">
     <span aria-hidden="true">★★★★★</span>
-    <span className="sr-only">Note Google : {rating} sur 5</span>
+    <span id={id} className="sr-only">
+      Note Google : {rating} sur 5
+    </span>
   </div>
 )
 
-const TestimonialCard = ({ testimonial }) => (
-  <article className="google-testimonial-card">
-    <RatingStars rating={testimonial.rating} />
-    <blockquote>{testimonial.text}</blockquote>
-    <footer>
-      <strong>{testimonial.author}</strong>
-      {testimonial.date ? <span>{testimonial.date}</span> : null}
-    </footer>
-  </article>
-)
+// The excerpt is only used when it is the exact beginning of the review, so
+// that the author's words are never altered.
+export const getTestimonialExcerpt = ({ excerpt, text }) => {
+  const trimmedText = text.trim()
+  const trimmedExcerpt = typeof excerpt === 'string' ? excerpt.trim() : ''
 
-const GoogleTestimonialsSection = ({ testimonials = GOOGLE_TESTIMONIALS }) => {
-  const place = useGooglePlace()
+  if (
+    trimmedExcerpt === '' ||
+    trimmedExcerpt.length >= trimmedText.length ||
+    !trimmedText.startsWith(trimmedExcerpt)
+  ) {
+    return trimmedText
+  }
+
+  return `${trimmedExcerpt}…`
+}
+
+const TestimonialCard = ({ href, index, testimonial }) => {
+  const idPrefix = `google-testimonial-${index}`
+  const content = (
+    <>
+      <RatingStars id={`${idPrefix}-rating`} rating={testimonial.rating} />
+      <blockquote id={`${idPrefix}-quote`}>
+        {getTestimonialExcerpt(testimonial)}
+      </blockquote>
+      <footer>
+        <strong id={`${idPrefix}-author`}>{testimonial.author}</strong>
+        {testimonial.date ? <span>{testimonial.date}</span> : null}
+      </footer>
+    </>
+  )
+
+  if (!href) {
+    return <article className="google-testimonial-card">{content}</article>
+  }
+
+  return (
+    <a
+      className="google-testimonial-card google-testimonial-card-link"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-labelledby={`${idPrefix}-cta`}
+      aria-describedby={`${idPrefix}-rating ${idPrefix}-quote`}
+    >
+      {content}
+      <span id={`${idPrefix}-cta`} className="google-testimonial-cta">
+        <span className="sr-only">Avis de {testimonial.author} — </span>
+        Lire les avis sur Google
+        <span aria-hidden="true"> ↗</span>
+        <span className="sr-only"> (nouvel onglet)</span>
+      </span>
+    </a>
+  )
+}
+
+const GoogleTestimonialsSection = ({
+  summary = GOOGLE_REVIEWS_SUMMARY,
+  testimonials = GOOGLE_TESTIMONIALS,
+}) => {
+  const apiPlace = useGooglePlace()
+  // Live data from the API when configured, otherwise the manual summary.
+  const place = apiPlace || summary
+  const manualAsOf = !apiPlace && summary ? summary.asOf : null
   const validTestimonials = testimonials.filter(isValidTestimonial)
+  const reviewsUrl = (place && place.reviewsUrl) || GOOGLE_REVIEWS_URL
   const hasGoogleLinks =
     place && (place.reviewsUrl || place.writeReviewUrl || place.placeUrl)
 
@@ -78,6 +136,12 @@ const GoogleTestimonialsSection = ({ testimonials = GOOGLE_TESTIMONIALS }) => {
                 </strong>
                 /5 —{' '}
                 {place.userRatingCount.toLocaleString('fr-FR')} avis Google
+                {manualAsOf ? (
+                  <span className="google-reviews-as-of">
+                    {' '}
+                    (au {manualAsOf})
+                  </span>
+                ) : null}
               </p>
             </div>
           ) : null}
@@ -96,14 +160,17 @@ const GoogleTestimonialsSection = ({ testimonials = GOOGLE_TESTIMONIALS }) => {
           ) : null}
         </header>
         {validTestimonials.length > 0 ? (
-          <div className="google-testimonials-grid">
-            {validTestimonials.map((testimonial) => (
-              <TestimonialCard
-                key={`${testimonial.author}-${testimonial.text}`}
-                testimonial={testimonial}
-              />
+          <ul className="google-testimonials-grid">
+            {validTestimonials.map((testimonial, index) => (
+              <li key={`${testimonial.author}-${testimonial.text}`}>
+                <TestimonialCard
+                  href={reviewsUrl}
+                  index={index}
+                  testimonial={testimonial}
+                />
+              </li>
             ))}
-          </div>
+          </ul>
         ) : null}
       </div>
     </section>
