@@ -9,12 +9,20 @@ import {
   CABINET_PHONE,
   CABINET_PHONE_HREF,
 } from '@/config/cabinet'
+import {
+  FieldError,
+  FormPrivacyNotice,
+  RequiredFieldsNote,
+  RequiredMark,
+} from '@/components/forms'
 import { useContactForm } from '@/hooks/useContactForm'
 import MainLayout from '@/layouts/MainLayout'
 
 const Contact = () => {
   const {
     feedback,
+    fieldErrors,
+    getFieldProps,
     handleSubmit,
     isError,
     isSubmitting,
@@ -89,6 +97,10 @@ const Contact = () => {
                       {CABINET_ADDRESS_LINES[0]}
                       <br />
                       {CABINET_ADDRESS_LINES[1]}
+                      <br />
+                      {CABINET_ADDRESS_LINES[2]}
+                      <br />
+                      {CABINET_ADDRESS_LINES[3]}
                     </p>
                   </div>
                 </div>
@@ -178,13 +190,16 @@ const Contact = () => {
                 <form
                   data-form-id="767f1e8a-b0f2-49a7-a920-afd05f5b9ef7"
                   className="contact-contact-form"
+                  noValidate
                   onChange={resetFeedback}
                   onSubmit={handleSubmit}
                 >
+                  <RequiredFieldsNote />
                   <div className="contact-form-row">
                     <div className="contact-form-group">
                       <label htmlFor="nom" className="contact-form-label">
                         Nom complet
+                        <RequiredMark />
                       </label>
                       <input
                         type="text"
@@ -193,7 +208,12 @@ const Contact = () => {
                         required
                         placeholder="Jean Dupont"
                         data-form-field-id="nom"
+                        {...getFieldProps('nom', 'contact-nom-error')}
                         className="contact-form-input"
+                      />
+                      <FieldError
+                        id="contact-nom-error"
+                        message={fieldErrors.nom}
                       />
                     </div>
                   </div>
@@ -201,6 +221,7 @@ const Contact = () => {
                     <div className="contact-form-group">
                       <label htmlFor="email" className="contact-form-label">
                         Email
+                        <RequiredMark />
                       </label>
                       <input
                         type="email"
@@ -209,21 +230,33 @@ const Contact = () => {
                         required
                         placeholder="jean@exemple.fr"
                         data-form-field-id="email"
+                        {...getFieldProps('email', 'contact-email-error')}
                         className="contact-form-input"
+                      />
+                      <FieldError
+                        id="contact-email-error"
+                        message={fieldErrors.email}
                       />
                     </div>
                     <div className="contact-form-group">
                       <label htmlFor="telephone" className="contact-form-label">
                         Téléphone
+                        <RequiredMark />
                       </label>
                       <input
                         type="tel"
                         id="telephone"
                         name="telephone"
+                        autoComplete="tel"
                         required
                         placeholder="06 12 34 56 78"
                         data-form-field-id="telephone"
+                        {...getFieldProps('telephone', 'contact-telephone-error')}
                         className="contact-form-input"
+                      />
+                      <FieldError
+                        id="contact-telephone-error"
+                        message={fieldErrors.telephone}
                       />
                     </div>
                   </div>
@@ -231,6 +264,7 @@ const Contact = () => {
                     <div className="contact-form-group">
                       <label htmlFor="message" className="contact-form-label">
                         Votre message
+                        <RequiredMark />
                       </label>
                       <textarea
                         id="message"
@@ -239,8 +273,13 @@ const Contact = () => {
                         minLength={10}
                         placeholder="Comment puis-je vous aider ?"
                         data-form-field-id="message"
+                        {...getFieldProps('message', 'contact-message-error')}
                         className="contact-form-input contact-form-textarea"
                       ></textarea>
+                      <FieldError
+                        id="contact-message-error"
+                        message={fieldErrors.message}
+                      />
                     </div>
                   </div>
                   <input
@@ -290,6 +329,7 @@ const Contact = () => {
                       Confidentialité garantie. Je vous répondrai sous 24
                       heures ouvrées.
                     </p>
+                    <FormPrivacyNotice />
                     {feedback ? (
                       <div
                         className={`form-flash ${

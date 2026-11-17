@@ -13,11 +13,19 @@ import {
   CABINET_PHONE,
   CABINET_PHONE_HREF,
 } from '@/config/cabinet'
+import {
+  FieldError,
+  FormPrivacyNotice,
+  RequiredFieldsNote,
+  RequiredMark,
+} from '@/components/forms'
 import { useContactForm } from '@/hooks/useContactForm'
 
 const Home = () => {
   const {
     feedback,
+    fieldErrors,
+    getFieldProps,
     handleSubmit,
     isError,
     isSubmitting,
@@ -64,7 +72,7 @@ const Home = () => {
             </p>
             <p className="hero-description section-content">
               Dédiée à la protection de vos droits avec excellence et humanité.
-              Spécialisée dans l&apos;accompagnement des victimes, Maître
+              Engagée dans l&apos;accompagnement des victimes, Maître
               Pauline NGOMA MABALA met son expertise au service de votre sérénité et de
               votre justice.
             </p>
@@ -140,7 +148,7 @@ const Home = () => {
           <header className="domaines-header">
             <h2 className="section-title">Domaines d&apos;intervention</h2>
             <p className="section-subtitle">
-              Une défense spécialisée pour chaque situation
+              Une défense adaptée à chaque situation
             </p>
           </header>
           <div className="domaines-grid">
@@ -692,12 +700,15 @@ const Home = () => {
               <form
                 data-form-id="8876550f-271e-45f2-bca8-5d5bb3f1cc5c"
                 className="contact-form"
+                noValidate
                 onChange={resetFeedback}
                 onSubmit={handleSubmit}
               >
+                <RequiredFieldsNote />
                 <div className="form-group">
                   <label htmlFor="name" className="form-label">
                     Nom complet
+                    <RequiredMark />
                   </label>
                   <input
                     type="text"
@@ -706,13 +717,16 @@ const Home = () => {
                     required
                     placeholder="Votre nom"
                     data-form-field-id="name"
+                    {...getFieldProps('nom', 'home-name-error')}
                     className="form-input"
                   />
+                  <FieldError id="home-name-error" message={fieldErrors.nom} />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="email" className="form-label">
                       Email
+                      <RequiredMark />
                     </label>
                     <input
                       type="email"
@@ -721,26 +735,34 @@ const Home = () => {
                       required
                       placeholder="votre@email.com"
                       data-form-field-id="email"
+                      {...getFieldProps('email', 'home-email-error')}
                       className="form-input"
                     />
+                    <FieldError id="home-email-error" message={fieldErrors.email} />
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone" className="form-label">
                       Téléphone
+                      <RequiredMark />
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="telephone"
+                      autoComplete="tel"
+                      required
                       placeholder="06 00 00 00 00"
                       data-form-field-id="phone"
+                      {...getFieldProps('telephone', 'home-phone-error')}
                       className="form-input"
                     />
+                    <FieldError id="home-phone-error" message={fieldErrors.telephone} />
                   </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">
                     Message
+                    <RequiredMark />
                   </label>
                   <textarea
                     id="message"
@@ -748,8 +770,10 @@ const Home = () => {
                     required
                     placeholder="Comment puis-je vous aider ?"
                     data-form-field-id="message"
+                    {...getFieldProps('message', 'home-message-error')}
                     className="form-textarea"
                   ></textarea>
+                  <FieldError id="home-message-error" message={fieldErrors.message} />
                 </div>
                 <input
                   type="text"
@@ -774,6 +798,7 @@ const Home = () => {
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Prendre rendez-vous'}
                 </button>
+                <FormPrivacyNotice />
                 {feedback ? (
                   <div
                     className={`form-flash ${

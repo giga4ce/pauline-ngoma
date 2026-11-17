@@ -39,7 +39,7 @@ const MentionsLegales = () => {
                 </p>
                 <ul className="legal-list section-content">
                   <li>
-                    Adresse: {CABINET_ADDRESS_LINES[0]}, {CABINET_ADDRESS_LINES[1]}
+                    Adresse : {CABINET_ADDRESS_LINES.join(', ')}
                   </li>
                   <li>
                     Téléphone: <a href={CABINET_PHONE_HREF}>{CABINET_PHONE}</a>
@@ -47,6 +47,7 @@ const MentionsLegales = () => {
                   <li>
                     Email : <a href={CABINET_EMAIL_HREF}>{CABINET_EMAIL}</a>
                   </li>
+                  <li>SIRET : 849 803 101 00039</li>
                 </ul>
               </section>
 
