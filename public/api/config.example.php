@@ -14,4 +14,9 @@ return [
         'to_email' => 'contact@pauline-ngoma-mabala.fr',
         'to_name' => 'Maître Pauline NGOMA MABALA',
     ],
+    'google_places' => [
+        'api_key' => 'CHANGE_ME',
+        'place_id' => 'ChIJPVYDeN-NyRIRZYHZKHFWd08',
+        'timeout_seconds' => 3,
+    ],
 ];

@@ -125,9 +125,6 @@
     flex: none;
     width: 100%;
   }
-  .testimonials-slider-wrapper {
-    max-width: 100%;
-  }
   .values-flex-container {
     text-align: center;
     flex-direction: column;
@@ -235,20 +232,6 @@
   .flex-row {
     flex-direction: column;
   }
-  .testimonials-container {
-    padding: 0 var(--spacing-md);
-  }
-  .testimonials-slider-wrapper {
-    max-width: 100%;
-  }
-  .testimonial-card {
-    margin: 0;
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
-  .testimonial-text {
-    font-size: var(--font-size-base);
-    margin-bottom: var(--spacing-lg);
-  }
   .expertise-card {
     flex: 1 1 100%;
   }
@@ -325,16 +308,6 @@
     text-align: center;
     align-items: center;
     flex-direction: column;
-  }
-  .testimonials-luxury {
-    padding: var(--spacing-2xl) 0;
-  }
-  .testimonial-card {
-    padding: var(--spacing-lg) var(--spacing-md);
-  }
-  .testimonial-text {
-    font-size: var(--font-size-base);
-    line-height: 1.6;
   }
   .expertise-hero {
     height: 56svh;

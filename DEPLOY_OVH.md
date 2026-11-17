@@ -62,7 +62,39 @@ Avec ton client FTP :
 Le fichier `.htaccess` est genere avec le build car il est place dans `public/`.
 Il est necessaire pour que les routes React comme `/contact`, `/cabinet` ou `/honoraires` fonctionnent correctement sur OVH.
 
-## 5. SSL et HTTPS
+## 5. Configurer Google Places API
+
+Prerequis Google Cloud :
+
+1. activer `Places API (New)`
+2. creer une cle API reservee au serveur
+3. restreindre cette cle a `Places API (New)`
+4. si une restriction par adresse IP est utilisee, autoriser uniquement l'adresse IP sortante de l'hebergement OVH
+
+Dans `www/api/`, copier `config.example.php` vers `config.php`, puis renseigner la section :
+
+```php
+'google_places' => [
+    'api_key' => 'CHANGE_ME',
+    'place_id' => 'ChIJPVYDeN-NyRIRZYHZKHFWd08',
+    'timeout_seconds' => 3,
+],
+```
+
+Remplacer `CHANGE_ME` directement sur le serveur. Ne jamais commiter ni integrer cette cle dans une variable `REACT_APP_*` : ces variables sont publiques dans le bundle frontend.
+
+Le fichier `public/api/config.php` est ignore par Git et bloque par `public/api/.htaccess`. L'endpoint `/api/google-place.php` appelle Google directement, sans cache persistant. En cas d'indisponibilite, la homepage masque les donnees Google dynamiques.
+
+Verifier apres deploiement :
+
+```bash
+curl --fail-with-body --silent --show-error \
+  https://www.pauline-ngoma-mabala.fr/api/google-place.php
+```
+
+La reponse ne doit contenir que `rating`, `userRatingCount`, `placeUrl`, `reviewsUrl` et `writeReviewUrl`. Elle ne doit jamais contenir la cle API.
+
+## 6. SSL et HTTPS
 
 Si le certificat n'est pas encore actif :
 
@@ -76,7 +108,7 @@ Ensuite, verifier :
 - `https://pauline-ngoma-mabala.fr`
 - `https://www.pauline-ngoma-mabala.fr`
 
-## 6. Verifications apres mise en ligne
+## 7. Verifications apres mise en ligne
 
 Verifier au minimum :
 
@@ -89,7 +121,7 @@ Verifier au minimum :
 
 Si une URL interne affiche une erreur 404, le fichier `.htaccess` n'a probablement pas ete envoye dans `www/`.
 
-## 7. Point d'attention sur le formulaire de contact
+## 8. Point d'attention sur le formulaire de contact
 
 Le formulaire n'envoie pas aujourd'hui vers OVH Mail. Il utilise `formsubmit.co`.
 
