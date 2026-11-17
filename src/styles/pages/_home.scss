@@ -319,7 +319,14 @@
   display: grid;
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
+  padding: 0;
+  list-style: none;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.google-testimonials-grid > li {
+  display: flex;
+  min-width: 0;
 }
 
 .google-testimonial-card {
@@ -347,6 +354,40 @@
 .google-testimonial-card footer span {
   color: var(--color-on-surface-secondary);
   font-size: var(--font-size-sm);
+}
+
+.google-testimonial-card-link {
+  display: flex;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.google-testimonial-card-link footer {
+  margin-top: auto;
+}
+
+.google-testimonial-card-link:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-level-2);
+  transform: translateY(-3px);
+}
+
+.google-testimonial-card-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.google-testimonial-cta {
+  margin-top: var(--spacing-md);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 @media(max-width: 767px) {
@@ -683,3 +724,9 @@
  
 
  
+
+.google-reviews-as-of {
+  color: var(--color-on-surface-secondary);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
